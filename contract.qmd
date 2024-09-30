@@ -48,13 +48,16 @@ Team Members:**
     -   Participating actively in all meetings.
 
     -   Completing their assigned tasks on time.
--   Communicating openly and promptly if issues arise.
+
+    -   Considering thoughts/opinions of all group members.
+
+    -   Communicating openly and promptly if issues arise.
 
 **Communication Plan**
 
--   **Meeting Schedule:** Weekly on \[Day\] at \[Time\] via \[platform\].
+-   **Meeting Schedule:** Weekly on Friday at Noon via Zoom.
 
--   **Primary Communication Platform:** \[Platform, e.g., Slack\].
+-   **Primary Communication Platform:** Slack
 
 -   **Decision-Making Process:** Decisions will be made by consensus; if a consensus cannot be reached, a vote will be taken.
 
