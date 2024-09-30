@@ -16,7 +16,7 @@ Team Members:**
 
 **Project Overview**
 
--   **Project Description:** \[A brief overview of the project, including the main objectives and purpose.\]
+-   **Project Description:** Use dataset to answer determined questions.
 
 -   **Expected Deliverables:** \[List of specific outputs, such as final visualizations, reports, presentations.\]
 
