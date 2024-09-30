@@ -42,7 +42,7 @@ Team Members:**
     -   **Project Manager:** Raja Sekhar Malireddy – Ensures timelines are met, organizes meetings, and manages communications.
     -   **Data Analyst:** Rafi Leviton, Vaishnav Mandlik – Responsible for data cleaning, analysis, and exploratory visualizations.
     -   **Visualization Specialist:** Bryan Jacobs, Arjun Kumar – Designs the final visualizations and makes aesthetic choices.
-    -   **Documentation Lead:** Sri Ram Theerdh Manikyala – Keeps detailed notes, ensures all project decisions are documented, and handles the final report.
+    -   **Documentation Lead:** Sri Ram Theerdh Manikyala, Deepak Lingala – Keeps detailed notes, ensures all project decisions are documented, and handles the final report.
 -   **Responsibilities:**
 -   **General Responsibilities:** Each team member is responsible for:
     -   Participating actively in all meetings.
