@@ -10,9 +10,9 @@ Team Members:**
 
 4.  \[Sri Ram Theerdh Manikyala, manikyala\@arizona.edu, 520 283 3605\]
 
-5.  \[Rafi Leviton, rjleviton@arizona.edu, 612 840 1262\]
+5.  \[Rafi Leviton, rjleviton\@arizona.edu, 612 840 1262\]
 
-6.  \[Arjun Kumar, arjunkumar@arizona.edu, 520 232 4452\]
+6.  \[Arjun Kumar, arjunkumar\@arizona.edu, 520 232 4452\]
 
 **Project Overview**
 
@@ -32,13 +32,13 @@ Team Members:**
 
 <!-- -->
 
--   **Project Manager:** \[Name\] – Ensures timelines are met, organizes meetings, and manages communications.
+-   **Project Manager:** Raja Sekhar Malireddy – Ensures timelines are met, organizes meetings, and manages communications.
 
--   **Data Analyst:** \[Name\] – Responsible for data cleaning, analysis, and exploratory visualizations.
+-   **Data Analyst:** Rafi Leviton, Vaishnav Mandlik – Responsible for data cleaning, analysis, and exploratory visualizations.
 
--   **Visualization Specialist:** \[Name\] – Designs the final visualizations and makes aesthetic choices.
+-   **Visualization Specialist:** Bryan Jacobs, Arjun Kumar – Designs the final visualizations and makes aesthetic choices.
 
--   **Documentation Lead:** \[Name\] – Keeps detailed notes, ensures all project decisions are documented, and handles the final report.
+-   **Documentation Lead:** Sri Ram Theerdh Manikyala – Keeps detailed notes, ensures all project decisions are documented, and handles the final report.
 
 <!-- -->
 
