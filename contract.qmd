@@ -1,0 +1,114 @@
+**Team Project Contract**\
+**Project Title:** \[Title of the final project\]\
+**Team Members:**
+
+1.  \[Name, Contact Information\]
+
+2.  \[Name, Contact Information\]
+
+3.  \[Name, Contact Information\]
+
+4.  \[Name, Contact Information\]
+
+**Project Overview**
+
+-   **Project Description:** \[A brief overview of the project, including the main objectives and purpose.\]
+
+-   **Expected Deliverables:** \[List of specific outputs, such as final visualizations, reports, presentations.\]
+
+**Team Goals**
+
+-   **Project Goals:** \[A few bullet points outlining what the team aims to achieve.\]
+
+-   **Learning Objectives:** \[What skills or knowledge each team member hopes to develop.\]
+
+**Team Roles and Responsibilities**
+
+-   **Roles (change as needed):**
+
+```{=html}
+<!-- -->
+```
+-   **Project Manager:** \[Name\] – Ensures timelines are met, organizes meetings, and manages communications.
+
+-   **Data Analyst:** \[Name\] – Responsible for data cleaning, analysis, and exploratory visualizations.
+
+-   **Visualization Specialist:** \[Name\] – Designs the final visualizations and makes aesthetic choices.
+
+-   **Documentation Lead:** \[Name\] – Keeps detailed notes, ensures all project decisions are documented, and handles the final report.
+
+```{=html}
+<!-- -->
+```
+-   **Responsibilities:**
+
+-   **General Responsibilities:** Each team member is responsible for:
+
+```{=html}
+<!-- -->
+```
+-   Participating actively in all meetings.
+
+-   Completing their assigned tasks on time.
+
+```{=html}
+<!-- -->
+```
+-   Communicating openly and promptly if issues arise.
+
+**Communication Plan**
+
+-   **Meeting Schedule:** Weekly on \[Day\] at \[Time\] via \[platform\].
+
+-   **Primary Communication Platform:** \[Platform, e.g., Slack\].
+
+-   **Decision-Making Process:** Decisions will be made by consensus; if a consensus cannot be reached, a vote will be taken.
+
+**Work Plan and Timeline**
+
+-   **Milestones:**
+
+```{=html}
+<!-- -->
+```
+-   **Data Collection and Cleaning:** Completed by \[Date\].
+
+-   **Exploratory Data Analysis:** Completed by \[Date\].
+
+-   **Design of Visualizations:** Completed by \[Date\].
+
+-   **Final Presentation and Report:** Completed by \[Date\].
+
+```{=html}
+<!-- -->
+```
+-   **Task Assignments:** \[Use a table to assign tasks to team members with due dates.\]
+
+**Accountability and Expectations**
+
+-   **Attendance Policy:** All team members are expected to attend scheduled meetings unless previously discussed.
+
+-   **Quality of Work:** All deliverables should be completed to a professional standard.
+
+-   **Deadlines:** All members are responsible for meeting deadlines. If someone cannot meet a deadline, they must notify the team in advance.
+
+**Conflict Resolution Plan**
+
+-   **Conflict Management:** If a conflict arises, team members will:
+
+1.  Discuss the issue openly during a team meeting.
+
+2.  Attempt to resolve the issue through compromise.
+
+3.  If the conflict persists, consult the project supervisor for guidance.
+
+**Signatures**\
+By signing below, each team member agrees to the terms of this contract and commits to working together effectively and respectfully.
+
+-   **\[Name\]**: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date: \_\_\_\_\_\_\_\_\_\_\_
+
+-   **\[Name\]**: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date: \_\_\_\_\_\_\_\_\_\_\_
+
+-   **\[Name\]**: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date: \_\_\_\_\_\_\_\_\_\_\_
+
+-   **\[Name\]**: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date: \_\_\_\_\_\_\_\_\_\_\_
