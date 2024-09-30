@@ -20,7 +20,7 @@ Team Members:**
 
 -   **Project Description:** Use dataset to answer determined questions.
 
--   **Expected Deliverables:** \[List of specific outputs, such as final visualizations, reports, presentations.\]
+-   **Expected Deliverables:** \*update for milestone 2
 
 **Team Goals**
 
