@@ -20,13 +20,21 @@ Team Members:**
 
 -   **Project Description:** Use dataset to answer determined questions.
 
--   **Expected Deliverables:** \*update for milestone 2
+-   **Expected Deliverables:** *milestone 2*
 
 **Team Goals**
 
--   **Project Goals:** \[A few bullet points outlining what the team aims to achieve.\]
+-   **Project Goals:** \[A few bullet points outlining what the team aims to achieve.\] *milestone 2*
 
--   **Learning Objectives:** \[What skills or knowledge each team member hopes to develop.\]
+-   **Learning Objectives:**
+
+    -   Improve comprehension of RStudio, GitHub, and related RStudio packages (ggplot, tidyverse, etc.).
+
+    -   Gain new, or hone existing mathematical and statistical analysis skills.
+
+    -   Get comfortable working collaboratively in a professional setting
+
+    -   Improve data science related skills (data cleaning, data preprocessing, data visualization)
 
 **Team Roles and Responsibilities**
 
