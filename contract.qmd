@@ -64,11 +64,11 @@ Team Members:**
 **Work Plan and Timeline**
 
 -   **Milestones:**
-    -   **Data Collection and Cleaning:** Completed by \[Date\].
-    -   **Exploratory Data Analysis:** Completed by \[Date\].
-    -   **Design of Visualizations:** Completed by \[Date\].
-    -   **Final Presentation and Report:** Completed by \[Date\].
--   **Task Assignments:** \[Use a table to assign tasks to team members with due dates.\]
+    -   **Data Collection and Cleaning:** Completed by Oct 16.
+    -   **Exploratory Data Analysis:** Completed by Nov 1.
+    -   **Design of Visualizations:** Completed by Nov 13.
+    -   **Final Presentation and Report:** Completed by Dec 13.
+-   **Task Assignments:** \[Use a table to assign tasks to team members with due dates.\] *milestone 2*
 
 **Accountability and Expectations**
 
