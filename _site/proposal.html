@@ -4856,19 +4856,22 @@ vertical-align: -.125em;
 <section id="dataset" class="level2">
 <h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Option 1: tidytuesdayR package </span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="do">## install.packages(&quot;tidytuesdayR&quot;)</span></span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">#label: load-dataset</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="co"># message: false</span></span>
 <span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a>tuesdata <span class="ot">&lt;-</span> tidytuesdayR<span class="sc">::</span><span class="fu">tt_load</span>(<span class="st">&#39;2024-08-06&#39;</span>)</span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="do">## OR</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>tuesdata <span class="ot">&lt;-</span> tidytuesdayR<span class="sc">::</span><span class="fu">tt_load</span>(<span class="dv">2024</span>, <span class="at">week =</span> <span class="dv">32</span>)</span>
-<span id="cb2-7"><a href="#cb2-7"></a></span>
-<span id="cb2-8"><a href="#cb2-8"></a>olympics <span class="ot">&lt;-</span> tuesdata<span class="sc">$</span>olympics</span>
-<span id="cb2-9"><a href="#cb2-9"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># Option 1: tidytuesdayR package </span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="do">## install.packages(&quot;tidytuesdayR&quot;)</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="co">#tuesdata &lt;- tidytuesdayR::tt_load(&#39;2024-08-06&#39;)</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="do">## OR</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="co">#tuesdata &lt;- tidytuesdayR::tt_load(2024, week = 32)</span></span>
 <span id="cb2-10"><a href="#cb2-10"></a></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="co"># Option 2: Read directly from GitHub</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="co">#olympics &lt;- tuesdata$olympics</span></span>
 <span id="cb2-12"><a href="#cb2-12"></a></span>
-<span id="cb2-13"><a href="#cb2-13"></a>olympics <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-08-06/olympics.csv&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-13"><a href="#cb2-13"></a></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="co"># Option 2: Read directly from GitHub</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="co">#olympics &lt;- readr::read_csv(&#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-08-06/olympics.csv&#39;)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Our data set comes from 2024-08-06 tidytuesday, and contains data from every Olympic Games ranging from Athens 1896 to Rio 2016. The data set is 271,116 rows by 15 columns and contains data for every Olympic medal winner such as their name, sex, country, height, weight, and games they won the medal at.</p>
 <p>It is important to note that winter and summer games were held in the same year up until 1992. From 1992 onward they were staggered by two years.</p>
@@ -5572,22 +5575,22 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb3-29"><a href="#cb3-29"></a><span class="fu">## Dataset</span></span>
 <span id="cb3-30"><a href="#cb3-30"></a></span>
 <span id="cb3-33"><a href="#cb3-33"></a><span class="in">```{r}</span></span>
-<span id="cb3-34"><a href="#cb3-34"></a><span class="co">#| label: load-dataset</span></span>
-<span id="cb3-35"><a href="#cb3-35"></a><span class="co">#| message: false</span></span>
+<span id="cb3-34"><a href="#cb3-34"></a><span class="co">#label: load-dataset</span></span>
+<span id="cb3-35"><a href="#cb3-35"></a><span class="co"># message: false</span></span>
 <span id="cb3-36"><a href="#cb3-36"></a></span>
 <span id="cb3-37"><a href="#cb3-37"></a><span class="co"># Option 1: tidytuesdayR package </span></span>
 <span id="cb3-38"><a href="#cb3-38"></a><span class="do">## install.packages(&quot;tidytuesdayR&quot;)</span></span>
 <span id="cb3-39"><a href="#cb3-39"></a></span>
-<span id="cb3-40"><a href="#cb3-40"></a>tuesdata <span class="ot">&lt;-</span> tidytuesdayR<span class="sc">::</span><span class="fu">tt_load</span>(<span class="st">&#39;2024-08-06&#39;</span>)</span>
+<span id="cb3-40"><a href="#cb3-40"></a><span class="co">#tuesdata &lt;- tidytuesdayR::tt_load(&#39;2024-08-06&#39;)</span></span>
 <span id="cb3-41"><a href="#cb3-41"></a><span class="do">## OR</span></span>
-<span id="cb3-42"><a href="#cb3-42"></a>tuesdata <span class="ot">&lt;-</span> tidytuesdayR<span class="sc">::</span><span class="fu">tt_load</span>(<span class="dv">2024</span>, <span class="at">week =</span> <span class="dv">32</span>)</span>
+<span id="cb3-42"><a href="#cb3-42"></a><span class="co">#tuesdata &lt;- tidytuesdayR::tt_load(2024, week = 32)</span></span>
 <span id="cb3-43"><a href="#cb3-43"></a></span>
-<span id="cb3-44"><a href="#cb3-44"></a>olympics <span class="ot">&lt;-</span> tuesdata<span class="sc">$</span>olympics</span>
+<span id="cb3-44"><a href="#cb3-44"></a><span class="co">#olympics &lt;- tuesdata$olympics</span></span>
 <span id="cb3-45"><a href="#cb3-45"></a></span>
 <span id="cb3-46"><a href="#cb3-46"></a></span>
 <span id="cb3-47"><a href="#cb3-47"></a><span class="co"># Option 2: Read directly from GitHub</span></span>
 <span id="cb3-48"><a href="#cb3-48"></a></span>
-<span id="cb3-49"><a href="#cb3-49"></a>olympics <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-08-06/olympics.csv&#39;</span>)</span>
+<span id="cb3-49"><a href="#cb3-49"></a><span class="co">#olympics &lt;- readr::read_csv(&#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-08-06/olympics.csv&#39;)</span></span>
 <span id="cb3-50"><a href="#cb3-50"></a></span>
 <span id="cb3-51"><a href="#cb3-51"></a><span class="in">```</span></span>
 <span id="cb3-52"><a href="#cb3-52"></a></span>

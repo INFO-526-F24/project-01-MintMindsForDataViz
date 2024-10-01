@@ -27,22 +27,22 @@ library(tidyverse)
 ## Dataset
 
 ```{r}
-#| label: load-dataset
-#| message: false
+#label: load-dataset
+# message: false
 
 # Option 1: tidytuesdayR package 
 ## install.packages("tidytuesdayR")
 
-tuesdata <- tidytuesdayR::tt_load('2024-08-06')
+#tuesdata <- tidytuesdayR::tt_load('2024-08-06')
 ## OR
-tuesdata <- tidytuesdayR::tt_load(2024, week = 32)
+#tuesdata <- tidytuesdayR::tt_load(2024, week = 32)
 
-olympics <- tuesdata$olympics
+#olympics <- tuesdata$olympics
 
 
 # Option 2: Read directly from GitHub
 
-olympics <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-08-06/olympics.csv')
+#olympics <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-08-06/olympics.csv')
 
 ```
 
