@@ -6,7 +6,7 @@ editor: visual
 
 This project was developed by **MintMindsForDataViz** For [INFO 526 - Data Analysis and Visualization](https://datavizaz.org/) at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.
 
--   Team member 1: Raja Sekhar Malireddy: 2nd year graduate student pursuing Information Science major, College of Information in University of Arizona.
+-   Team member 1: Bryan Jacobs: 2nd year graduate student pursuing Information Science major, College of Information in University of Arizona.
 
 -   Team member 2: One sentence description of Team member 2 (e.g., year, major, etc.).
 
