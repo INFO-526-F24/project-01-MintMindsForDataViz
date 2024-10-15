@@ -56,7 +56,10 @@ It is important to note that winter and summer games were held in the same year 
 
 ## Questions
 
-The two questions you want to answer.
+### Olympic Data Set (athlete_events.csv
+
+1.  Is there an ideal height or weight for each event? If so, what are they and have they changed over time?
+2.  
 
 ## Analysis plan
 
