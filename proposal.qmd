@@ -46,7 +46,7 @@ Our data set comes from 2024-08-06 tidytuesday, and contains data from every Oly
 
 It is important to note that winter and summer games were held in the same year up until 1992. From 1992 onward they were staggered by two years.
 
-### \*Data set 2
+### Big Tech Stock Prices (big_tech_stock_prices.csv)
 
 \*Data set 2 description
 
@@ -56,7 +56,7 @@ It is important to note that winter and summer games were held in the same year 
 
 ## Questions
 
-### Olympic Data Set (athlete_events.csv
+### Olympic Data Set
 
 1.  Is there an ideal height or weight for each event? If so, what are they and have they changed over time?
 2.  How has the performance of different countries changed over time? Are there any major events that could have led to a change in performance?
