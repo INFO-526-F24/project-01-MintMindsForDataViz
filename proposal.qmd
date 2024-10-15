@@ -21,67 +21,38 @@ execute:
 ```{r}
 #| label: load-pkgs
 #| message: false
-library(tidyverse)
-library(ggplot2)
+
+if (!require("pacman")) 
+  install.packages("pacman")
+
+pacman::p_load(tidyverse,
+              ggplot2)
 ```
 
-## **Criteria for datasets**
-
-The data sets should meet the following criteria:
-
--   At least 500 observations
-
--   At least 8 columns
-
--   At least 6 of the columns must be useful and unique explanatory variables.
-
-    -   Identifier variables such as “name”, “social security number”, etc. are not useful explanatory variables.
-
-    -   If you have multiple columns with the same information (e.g. “state abbreviation” and “state name”), then they are not unique explanatory variables.
-
--   You may not use data that has previously been used in any course materials, or any derivation of data that has been used in course materials.
-
--   You can curate one of your datasets via web scraping.
-
-## Dataset
+## Datasets
 
 ```{r}
-#label: load-dataset
-# message: false
+#| label: load-dataset
+#| message: false
 
-# Option 1: tidytuesdayR package 
-install.packages("tidytuesdayR")
-
-tuesdata <- tidytuesdayR::tt_load('2024-08-06')
-## OR
-#tuesdata <- tidytuesdayR::tt_load(2024, week = 32)
-
-olympics <- tuesdata$olympics
-
-
-# Option 2: Read directly from GitHub
-
-#olympics <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-08-06/olympics.csv')
-
+olympics <- read.csv("data/athlete_events.csv")
 ```
 
 ## **Introduction and data**
 
-For each data set:
-
--   **Identify the source of the data.**
-
--   **State when and how it was originally collected (by the original data curator, not necessarily how you found the data).**
-
--   **Write a brief description of the observations.**
-
--   **Address ethical concerns about the data, if any.**
-
-## Olympic Data Set (athlete_events.csv)
+### Olympic Data Set (athlete_events.csv)
 
 Our data set comes from 2024-08-06 tidytuesday, and contains data from every Olympic Games ranging from Athens 1896 to Rio 2016. The data set is 271,116 rows by 15 columns and contains data for every Olympic medal winner such as their name, sex, country, height, weight, and games they won the medal at.
 
 It is important to note that winter and summer games were held in the same year up until 1992. From 1992 onward they were staggered by two years.
+
+### \*Data set 2
+
+\*Data set 2 description
+
+### \* Data set 3
+
+\* data set 3 description
 
 ## Questions
 
