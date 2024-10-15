@@ -35,7 +35,8 @@ pacman::p_load(tidyverse,
 #| label: load-dataset
 #| message: false
 
-olympics <- read.csv("data/athlete_events.csv")
+olympics = read.csv("data/athlete_events.csv")
+world_events = read.csv("data/world_important_dates.csv")
 ```
 
 ## **Introduction and data**
@@ -45,6 +46,10 @@ olympics <- read.csv("data/athlete_events.csv")
 Our data set comes from 2024-08-06 tidytuesday, and contains data from every Olympic Games ranging from Athens 1896 to Rio 2016. The data set is 271,116 rows by 15 columns and contains data for every Olympic medal winner such as their name, sex, country, height, weight, and games they won the medal at.
 
 It is important to note that winter and summer games were held in the same year up until 1992. From 1992 onward they were staggered by two years.
+
+### World Events Data Set (world_important_events.csv)
+
+This data set comes from Saket Kumar on Kaggle and will be used in conjunction with the Olympics Data Set. The data set is 1,096 rows by 12 columns and contains data about major historic events such as date, country, type of event and more.
 
 ### Big Tech Stock Prices (big_tech_stock_prices.csv)
 
@@ -87,4 +92,5 @@ It is important to note that winter and summer games were held in the same year 
 
 ```{r}
 glimpse(olympics)
+glimpse(world_events)
 ```
