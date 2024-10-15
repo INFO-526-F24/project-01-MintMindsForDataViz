@@ -21,8 +21,12 @@ execute:
 ```{r}
 #| label: load-pkgs
 #| message: false
-library(tidyverse)
-library(ggplot2)
+
+if (!require("pacman")) 
+  install.packages("pacman")
+
+pacman::p_load(tidyverse,
+              ggplot2)
 ```
 
 ## **Criteria for datasets**
@@ -43,26 +47,13 @@ The data sets should meet the following criteria:
 
 -   You can curate one of your datasets via web scraping.
 
-## Dataset
+## Datasets
 
 ```{r}
-#label: load-dataset
-# message: false
+#| label: load-dataset
+#| message: false
 
-# Option 1: tidytuesdayR package 
-install.packages("tidytuesdayR")
-
-tuesdata <- tidytuesdayR::tt_load('2024-08-06')
-## OR
-#tuesdata <- tidytuesdayR::tt_load(2024, week = 32)
-
-olympics <- tuesdata$olympics
-
-
-# Option 2: Read directly from GitHub
-
-#olympics <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-08-06/olympics.csv')
-
+olympics <- read.csv("data/athlete_events.csv")
 ```
 
 ## **Introduction and data**
