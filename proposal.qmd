@@ -59,7 +59,7 @@ It is important to note that winter and summer games were held in the same year 
 ### Olympic Data Set (athlete_events.csv
 
 1.  Is there an ideal height or weight for each event? If so, what are they and have they changed over time?
-2.  
+2.  How has the performance of different countries changed over time? Are there any major events that could have led to a change in performance?
 
 ## Analysis plan
 
