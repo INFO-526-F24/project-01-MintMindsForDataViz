@@ -24,6 +24,24 @@ execute:
 library(tidyverse)
 ```
 
+## **Criteria for datasets**
+
+The data sets should meet the following criteria:
+
+-   At least 500 observations
+
+-   At least 8 columns
+
+-   At least 6 of the columns must be useful and unique explanatory variables.
+
+    -   Identifier variables such as “name”, “social security number”, etc. are not useful explanatory variables.
+
+    -   If you have multiple columns with the same information (e.g. “state abbreviation” and “state name”), then they are not unique explanatory variables.
+
+-   You may not use data that has previously been used in any course materials, or any derivation of data that has been used in course materials.
+
+-   You can curate one of your datasets via web scraping.
+
 ## Dataset
 
 ```{r}
