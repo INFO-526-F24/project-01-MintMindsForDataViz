@@ -56,7 +56,7 @@ It is important to note that winter and summer games were held in the same year 
 
 ## Questions
 
-### Olympic Data Set
+### Olympic Data Set (athlete_events.csv)
 
 1.  Is there an ideal height or weight for each event? If so, what are they and have they changed over time?
 2.  How has the performance of different countries changed over time? Are there any major events that could have led to a change in performance?
@@ -75,7 +75,7 @@ It is important to note that winter and summer games were held in the same year 
 
 -   A plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).
 
-### Olympic Data Set
+### Olympic Data Set (athlete_events.csv)
 
 ### Big Tech Stock Prices (big_tech_stock_prices.csv)
 
