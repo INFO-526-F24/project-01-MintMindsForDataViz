@@ -83,6 +83,7 @@ This data set comes from Saket Kumar on Kaggle and will be used in conjunction w
 ### Olympic Data Set (athlete_events.csv)
 
 1.  Variables: Sex, Height, Weight, Medal, Sport, Games, Year. We will investigate the distributions of height and weight of athletes across different sports and sexes. We can also investigate if so-called "ideal" heights and weights have changed over time for each event. This question has the potential to raise ethical concerns in that anyone is able to succeed in any sport no matter their height/weight. We just want to investigate whether or not there is a historical trend of success across different events in athletes with certain heights/weights.
+2.  Olympics data variables: Year, Games, Country, Medal, Event. World Events data variables: Name, Year, Month, Country, Type, Place, Impact, Effected Population, Person/Group Responsible, Outcome. We will investigate the change in medal count per country over time; overall and by event. We can use the world events data in order to find a potential cause for observed medal count changes.
 
 ### Big Tech Stock Prices (big_tech_stock_prices.csv)
 
