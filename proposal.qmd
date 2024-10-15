@@ -71,3 +71,31 @@ The two questions you want to answer.
 ## Analysis plan
 
 -   A plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).
+
+## **Research question**
+
+Your research question should contain at least three variables, and should be a mix of categorical and quantitative variables. When writing a research question, please think about the following:
+
+-   What is your target population?
+
+-   Is the question original?
+
+-   Can the question be answered?
+
+For each data set, include the following:
+
+-   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
+
+-   Statement on why this question is important.
+
+-   A description of the research topic along with a concise statement of your hypotheses on this topic.
+
+-   Identify the types of variables in your research question. Categorical? Quantitative?
+
+## **Glimpse of data**
+
+For each data set:
+
+-   Place the file containing your data in the `data/` folder of the project repo.
+
+-   Use the `glimpse()` function to provide a glimpse of the data set.
