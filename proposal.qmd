@@ -31,13 +31,13 @@ library(tidyverse)
 # message: false
 
 # Option 1: tidytuesdayR package 
-## install.packages("tidytuesdayR")
+install.packages("tidytuesdayR")
 
-#tuesdata <- tidytuesdayR::tt_load('2024-08-06')
+tuesdata <- tidytuesdayR::tt_load('2024-08-06')
 ## OR
 #tuesdata <- tidytuesdayR::tt_load(2024, week = 32)
 
-#olympics <- tuesdata$olympics
+olympics <- tuesdata$olympics
 
 
 # Option 2: Read directly from GitHub
@@ -45,6 +45,20 @@ library(tidyverse)
 #olympics <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-08-06/olympics.csv')
 
 ```
+
+## **Introduction and data**
+
+For each data set:
+
+-   **Identify the source of the data.**
+
+The olympic data
+
+-   **State when and how it was originally collected (by the original data curator, not necessarily how you found the data).**
+
+-   **Write a brief description of the observations.**
+
+-   **Address ethical concerns about the data, if any.**
 
 Our data set comes from 2024-08-06 tidytuesday, and contains data from every Olympic Games ranging from Athens 1896 to Rio 2016. The data set is 271,116 rows by 15 columns and contains data for every Olympic medal winner such as their name, sex, country, height, weight, and games they won the medal at.
 
