@@ -77,6 +77,8 @@ It is important to note that winter and summer games were held in the same year 
 
 ### Olympic Data Set (athlete_events.csv)
 
+1.  Variables: Sex, Height, Weight, Sport, Games, Year. We will investigate the distributions of height and weight of athletes across different sports and sexes. We can also investigate if so-called "ideal" heights and weights have changed over time for each event. This question has the potential to raise ethical concerns in that anyone is able to succeed in any sport no matter their height/weight. We just want to investigate whether or not there is a historical trend of success across different events in athletes with certain heights/weights.
+
 ### Big Tech Stock Prices (big_tech_stock_prices.csv)
 
 ### Data Set 3
