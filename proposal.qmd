@@ -22,6 +22,7 @@ execute:
 #| label: load-pkgs
 #| message: false
 library(tidyverse)
+library(ggplot2)
 ```
 
 ## **Criteria for datasets**
@@ -70,13 +71,13 @@ For each data set:
 
 -   **Identify the source of the data.**
 
-The olympic data
-
 -   **State when and how it was originally collected (by the original data curator, not necessarily how you found the data).**
 
 -   **Write a brief description of the observations.**
 
 -   **Address ethical concerns about the data, if any.**
+
+## Olympic Data Set (athlete_events.csv)
 
 Our data set comes from 2024-08-06 tidytuesday, and contains data from every Olympic Games ranging from Athens 1896 to Rio 2016. The data set is 271,116 rows by 15 columns and contains data for every Olympic medal winner such as their name, sex, country, height, weight, and games they won the medal at.
 
@@ -117,3 +118,7 @@ For each data set:
 -   Place the file containing your data in the `data/` folder of the project repo.
 
 -   Use the `glimpse()` function to provide a glimpse of the data set.
+
+```{r}
+glimpse(olympics)
+```
