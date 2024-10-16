@@ -2,7 +2,7 @@
 title: "Proposal title"
 subtitle: "Proposal"
 author: 
-  - name: "Team Name"
+  - name: "Mint Minds For DataViz"
     affiliations:
       - name: "School of Information, University of Arizona"
 description: "Project description"
@@ -37,6 +37,7 @@ pacman::p_load(tidyverse,
 
 olympics = read.csv("data/athlete_events.csv")
 world_events = read.csv("data/world_important_dates.csv")
+stock_prices = read.csv("data/big_tech_stock_prices.csv")
 ```
 
 ## **Introduction and data**
@@ -53,6 +54,8 @@ This data set comes from Saket Kumar on Kaggle and will be used in conjunction w
 
 ### Big Tech Stock Prices (big_tech_stock_prices.csv)
 
+Bit tech stock price dataset from 2023-02-07 tidytuesday. The data has 45089 rows and 8 columns. Rows has the stock stock symbol, date, open, high, low, close, adj close, volume from 2010-01-04 to 2022-12-29 of the following companies: Adobe Inc., Amazon.com, Inc., Salesforce, Inc., Cisco Systems, Inc., Alphabet Inc., IBM, Intel Corporation, Meta Platforms, Inc., Microsoft Corporation, Netflix, Inc., NVIDIA Corporation, Oracle Corporation, Tesla, Inc.
+
 \*Data set 2 description
 
 ### \* Data set 3
@@ -68,8 +71,11 @@ This data set comes from Saket Kumar on Kaggle and will be used in conjunction w
 
 ### Big Tech Stock Prices (big_tech_stock_prices.csv)
 
-1.  Q1
-2.  Q2
+1.  Is there any relationship between daily volatility open price and close price with the volume of stocks?
+  - This question is important because it can help trader to understand the relationship between the volume of stocks and the daily volatility of the stock price.
+2.  do closing price of stock of Big Tech companies correlate with each other over time?
+  - This question is important because it provides traders insights of closing prices of Big Tech companies related to volume of stock, it will help them to make investment decisions.
+
 
 ### Data Set 3
 
@@ -87,6 +93,9 @@ This data set comes from Saket Kumar on Kaggle and will be used in conjunction w
 
 ### Big Tech Stock Prices (big_tech_stock_prices.csv)
 
+1 . Variables: Date, Open, High, Low, Close, Adj Close, Volume. We will create new variables for daily volatility and investigate the relationship between daily volatility, open price, close price, and volume of stocks.
+2.  Variables: Date, Close. We’ll examine how the closing price of different Big Tech companies moves together by calculating correlations between them.
+
 ### Data Set 3
 
 ## **Glimpse of data**
@@ -94,4 +103,5 @@ This data set comes from Saket Kumar on Kaggle and will be used in conjunction w
 ```{r}
 glimpse(olympics)
 glimpse(world_events)
+glimpse(stock_prices)
 ```
