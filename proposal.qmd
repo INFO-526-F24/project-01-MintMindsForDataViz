@@ -36,7 +36,7 @@ pacman::p_load(tidyverse,
 #| message: false
 
 olympics = read.csv("data/athlete_events.csv")
-world_events = read.csv("data/world_important_dates.csv")
+Amazon = read.csv("data/Amazon Sales.csv")
 stock_prices = read.csv("data/big_tech_stock_prices.csv")
 ```
 
