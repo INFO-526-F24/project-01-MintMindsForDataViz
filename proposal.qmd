@@ -48,19 +48,13 @@ Our data set comes from 2024-08-06 tidytuesday, and contains data from every Oly
 
 It is important to note that winter and summer games were held in the same year up until 1992. From 1992 onward they were staggered by two years.
 
-### World Events Data Set (world_important_events.csv)
-
-This data set comes from Saket Kumar on Kaggle and will be used in conjunction with the Olympics Data Set. The data set is 1,096 rows by 12 columns and contains data about major historic events such as date, country, type of event and more.
-
 ### Big Tech Stock Prices (big_tech_stock_prices.csv)
 
 Bit tech stock price dataset from 2023-02-07 tidytuesday. The data has 45089 rows and 8 columns. Rows has the stock stock symbol, date, open, high, low, close, adj close, volume from 2010-01-04 to 2022-12-29 of the following companies: Adobe Inc., Amazon.com, Inc., Salesforce, Inc., Cisco Systems, Inc., Alphabet Inc., IBM, Intel Corporation, Meta Platforms, Inc., Microsoft Corporation, Netflix, Inc., NVIDIA Corporation, Oracle Corporation, Tesla, Inc.
 
-\*Data set 2 description
+### Amazon Sales Report (Amazon Sales.csv)
 
-### \* Data set 3
-
-\* data set 3 description
+We have taken this dataset from kaggle/e-commerce-sales-data, by Anil, and data belongs to Amazon.com. This dataset has 128975 rows and 24 column of data. This dataset provides detailed insights into Amazon sales data, including SKU Code, Design Number, Stock, Category, Size and Color, to help visualization of profitability. The dataset tracks transactions made by customers in an online retail store to analyze purchasing behavior and identify sales trends.
 
 ## Questions
 
@@ -79,10 +73,10 @@ Bit tech stock price dataset from 2023-02-07 tidytuesday. The data has 45089 row
 
 -   This question is important because it provides traders insights of closing prices of Big Tech companies related to volume of stock, it will help them to make investment decisions.
 
-### Data Set 3
+### Amazon Sales Report (Amazon Sales.csv)
 
-1.  Q1
-2.  Q2
+1.  What is the distribution of order statuses, and which status is the most common?
+2.  What are the top three product categories with the highest total sales amount?
 
 ## Analysis plan
 
