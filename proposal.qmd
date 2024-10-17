@@ -72,10 +72,12 @@ Bit tech stock price dataset from 2023-02-07 tidytuesday. The data has 45089 row
 ### Big Tech Stock Prices (big_tech_stock_prices.csv)
 
 1.  Is there any relationship between daily volatility open price and close price with the volume of stocks?
-  - This question is important because it can help trader to understand the relationship between the volume of stocks and the daily volatility of the stock price.
-2.  do closing price of stock of Big Tech companies correlate with each other over time?
-  - This question is important because it provides traders insights of closing prices of Big Tech companies related to volume of stock, it will help them to make investment decisions.
 
+-   This question is important because it can help trader to understand the relationship between the volume of stocks and the daily volatility of the stock price.
+
+2.  do closing price of stock of Big Tech companies correlate with each other over time?
+
+-   This question is important because it provides traders insights of closing prices of Big Tech companies related to volume of stock, it will help them to make investment decisions.
 
 ### Data Set 3
 
@@ -93,8 +95,7 @@ Bit tech stock price dataset from 2023-02-07 tidytuesday. The data has 45089 row
 
 ### Big Tech Stock Prices (big_tech_stock_prices.csv)
 
-1 . Variables: Date, Open, High, Low, Close, Adj Close, Volume. We will create new variables for daily volatility and investigate the relationship between daily volatility, open price, close price, and volume of stocks.
-2.  Variables: Date, Close. We’ll examine how the closing price of different Big Tech companies moves together by calculating correlations between them.
+1 . Variables: Date, Open, High, Low, Close, Adj Close, Volume. We will create new variables for daily volatility and investigate the relationship between daily volatility, open price, close price, and volume of stocks. 2. Variables: Date, Close. We’ll examine how the closing price of different Big Tech companies moves together by calculating correlations between them.
 
 ### Data Set 3
 
