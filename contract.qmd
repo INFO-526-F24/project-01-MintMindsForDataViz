@@ -18,13 +18,21 @@ Team Members:**
 
 **Project Overview**
 
--   **Project Description:** Use dataset to answer determined questions.
+-   **Project Description:**
 
--   **Expected Deliverables:** *milestone 2*
+    We will use Olympic data dating back to the very first Olympic Games in order to answer intriguing questions and tell interesting stories about the performance of different countries and athletes over the decades. *update when plots and specific questions are determined*
+
+-   **Expected Deliverables:** *update when plots are specific questions are determined*
 
 **Team Goals**
 
--   **Project Goals:** \[A few bullet points outlining what the team aims to achieve.\] *milestone 2*
+-   **Project Goals:**
+
+    -   Effectively communicate project questions and findings.
+
+    -   Create 4 presentation ready plots that tell an interesting story.
+
+    -   Create a professional presentation, dashboard, and report that will be useful on a resume beyond the scope of this course.
 
 -   **Learning Objectives:**
 
@@ -72,6 +80,7 @@ Team Members:**
 
 ```{r}
 #| title: Task Assignment Table
+#| warnings: False
 
 if (!require("pacman")) 
   install.packages("pacman")
