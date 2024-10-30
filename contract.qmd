@@ -68,7 +68,27 @@ Team Members:**
     -   **Exploratory Data Analysis:** Completed by Nov 1.
     -   **Design of Visualizations:** Completed by Nov 13.
     -   **Final Presentation and Report:** Completed by Dec 13.
--   **Task Assignments:** \[Use a table to assign tasks to team members with due dates.\] *milestone 2*
+-   **Task Assignments:**
+
+```{r}
+#| title: Task Assignment Table
+
+if (!require("pacman")) 
+  install.packages("pacman")
+
+pacman::p_load(tidyverse)
+
+tasks = tribble(
+  ~task,                    ~team_member,                   ~due_date,
+  "Q1 Prep Code",           NULL,                           "Nov 20",
+  "Q1 Visualizations",      NULL,                           "Nov 20",
+  "Q2 Prep Code",           NULL,                           "Nov 20",
+  "Q2 Visualizations",      NULL,                           "Nov 20",
+  "Presentation",           NULL,                           "Dec 9",
+  "Dashboard",              "Bryan",                        "Dec 9",
+  "Report",                 NULL,                           "Dec 9"
+)
+```
 
 **Accountability and Expectations**
 
