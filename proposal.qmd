@@ -61,7 +61,7 @@ We have taken this dataset from kaggle/e-commerce-sales-data, by Anil, and data 
 ### Olympic Data Set (athlete_events.csv)
 
 1.  Is there an ideal height or weight for each event? If so, what are they and have they changed over time?
-2.  How has the performance of different countries changed over time? Are there any major events that could have led to a change in performance?
+2.  How has the performance of different countries changed over time? Are there any major events that could have led to a change in performance? (medal count over time / gold medals over time)
 
 ### Big Tech Stock Prices (big_tech_stock_prices.csv)
 

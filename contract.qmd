@@ -91,11 +91,11 @@ tasks = tribble(
   ~task,                    ~team_member,                   ~due_date,
   "Q1 Prep Code",           "Rafi/",                        "Nov 20",
   "Q1 Visualizations",      "Bryan/Rafi",                   "Dec 1",
-  "Q2 Prep Code",           "Vaishnav/",                           "Nov 20",
-  "Q2 Visualizations",      "Raja/Vaishnav",                           "Dec 1",
-  "Presentation",           NULL,                           "Dec 9",
-  "Dashboard",              "Bryan/Raja",                       "Dec 9",
-  "Report",                 NULL,                           "Dec 9"
+  "Q2 Prep Code",           "Vaishnav/",                    "Nov 20",
+  "Q2 Visualizations",      "Raja/Vaishnav",                "Dec 1",
+  "Presentation",           "Bryan/",                       "Dec 9",
+  "Dashboard",              "Bryan/Raja",                   "Dec 9",
+  "Report",                 "Rafi/",                        "Dec 9"
 )
 ```
 
