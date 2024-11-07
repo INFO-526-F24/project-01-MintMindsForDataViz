@@ -1,11 +1,66 @@
 # Visualization 1
 
-Violin plot of height?
+Violin plot of height by decade for Mens basketball players
+
+Ideas: In dashboard could filter height by country and decade
 
 ```{r}
 #| label: Visualization 1
 #| warning: False
+
+# Visualization 1
+
+# Load in packages
+library(ggplot2)
+library(tidyverse)
+library(here)
+
+
+#### Load in Data
+olympics <- read_csv(here("data", "athlete_events.csv"))
+
+#### Data Prep
+
+# create decade column, years are rounded down for decade column (EX: Year=1896,Decade=1890)
+olympics$Decade <- floor(olympics$Year / 10) * 10
+
+# create height in inches column
+olympics$Height_Inches <- round(olympics$Height / 2.54)
+
+# create new df containing only basketball data
+basketball <- subset(olympics, Sport == 'Basketball')
+
+# create height in feet column
+basketball$Height_Ft <- floor(basketball$Height_Inches / 12)
+
+# create remainder of inches column
+basketball$Height_Inches_Rem <- round(basketball$Height_Inches %% 12)
+
+# filter even further for only mens basketball data
+mens_basketball <- subset(basketball, Event %in% c("Basketball Men's Basketball"))
+
+#### Olympics Men's Basketball Heights From the 2010 Decade
+
+# create men's basketball df for 2010
+mens_basketball_2010 <- subset(mens_basketball, Decade == 2010)
+
+# violin plot
+ggplot(mens_basketball, aes(x = Height_Inches, y = Decade, group = Decade)) +
+  geom_violin() +
+  labs(
+    title = "Olympics Men's Basketball Player Height Distribution",
+    subtitle = "2010 Decade",
+    x = "Height (in)",
+    y = ""
+  ) +
+  coord_cartesian(clip = "off")
 ```
+
+## Viz 1 References
+
+<https://r-coder.com/subset-r/>
+
+<https://stackoverflow.com/questions/35352914/floor-a-year-to-the-decade-in-r>
 
 # Visualization 2
 
