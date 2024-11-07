@@ -1,0 +1,19 @@
+# Visualization 1
+
+Violin plot of height?
+
+```{r}
+#| label: Visualization 1
+#| warning: False
+```
+
+# Visualization 2
+
+Line plot of median, 10th, and 90th percentile of height over time?
+
+Line plot of median heights over time by country?
+
+```{r}
+#| label: Visualization 2
+#| warning: False
+```
