@@ -20,7 +20,8 @@ pacman::p_load(tidyverse,
                here,
                RColorBrewer,
                DescTools,
-               grid)
+               grid,
+               gridExtra)
 
 
 #### Load in Data
@@ -95,27 +96,48 @@ proportion histogram of player heights vs medal
 #| label: Visualization 2
 #| warning: False
 
-medals_by_height = as.data.frame(cbind(mens_basketball$Height_Inches,
-                         mens_basketball$Medal))
-
-colnames(medals_by_height) = c("height",
-                               "medal")
-
+# Prepare the data
+medals_by_height = as.data.frame(cbind(mens_basketball$Height_Inches, mens_basketball$Medal))
+colnames(medals_by_height) = c("height", "medal")
 medals_by_height$medal = replace_na(medals_by_height$medal, "none")
-medals_by_height$medal = factor(medals_by_height$medal, levels = c("none",
-                                                                   "Gold",
-                                                                   "Silver",
-                                                                   "Bronze"))
+medals_by_height$medal = factor(medals_by_height$medal, levels = c("none", "Gold", "Silver", "Bronze"))
 medals_by_height$height = as.numeric(medals_by_height$height)
 
-medals_by_height |>
-  ggplot(aes(x = height, fill = medal)) +
-  geom_histogram(binwidth = 1, position = "fill", color = "black") +
-  scale_fill_manual(values = c("black",
-                               "#FFD700",
-                               "#C0C0C0",
-                               "#CD7F32")) +
+# Group by height and calculate counts
+medals_by_height_count = medals_by_height |>
+  group_by(height, medal) |>
+  count() |>
+  ungroup()
+
+# Group by height and calculate proportions
+medals_by_height_proportion = medals_by_height |>
+  group_by(height) |>
+  count(medal) |>
+  ungroup() |>
+  group_by(height) |>
+  mutate(proportion = n / sum(n))
+
+# Plot 1: Total Counts of Medals by Height
+plot_count = medals_by_height_count |>
+  ggplot(aes(x = height, y = n, fill = medal)) +
+  geom_bar(stat = "identity", position = "stack", color = "black") +
+  scale_fill_manual(values = c("black", "#FFD700", "#C0C0C0", "#CD7F32")) +
+  xlim(65, 90) +
+  labs(x = "Height", y = "Total Count of Medals", fill = "Medal") +
+  theme_minimal() +
+  theme(legend.position = "none")
+
+# Plot 2: Proportions of Medals by Height
+plot_proportion = medals_by_height_proportion |>
+  ggplot(aes(x = height, y = proportion, fill = medal)) +
+  geom_bar(stat = "identity", position = "stack", color = "black") +
+  scale_fill_manual(values = c("black", "#FFD700", "#C0C0C0", "#CD7F32")) +
   xlim(65, 90) +
   labs(x = "Height", y = "Proportion", fill = "Medal") +
-  theme_minimal()
+  theme_minimal() +
+  theme(legend.position = "none")
+
+# Arrange both plots side by side
+grid.arrange(plot_count, plot_proportion, ncol = 2)
+
 ```
