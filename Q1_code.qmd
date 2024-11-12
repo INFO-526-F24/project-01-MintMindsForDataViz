@@ -89,9 +89,7 @@ mens_basketball|>
 
 # Visualization 2
 
-Line plot of median, 10th, and 90th percentile of height over time?
-
-Line plot of median heights over time by country?
+proportion histogram of player heights vs medal
 
 ```{r}
 #| label: Visualization 2
