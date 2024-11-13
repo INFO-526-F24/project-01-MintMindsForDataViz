@@ -158,6 +158,8 @@ Odds Ratio = e\^0.08477 = 1.0885
 
 For every one inch increase in height, the odds of winning a medal increase by 8.85%
 
+Conclusion: Height almost definitely plays a role in earning a medal in Olympic basketball, but there are many other important factors needed to accurately predict if a player will win a medal such as skills, team context, or other physical attributes.
+
 ## Viz 2 References
 
 <https://www.rpubs.com/fangya/logr>
