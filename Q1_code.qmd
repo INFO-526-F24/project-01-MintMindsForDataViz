@@ -21,7 +21,8 @@ pacman::p_load(tidyverse,
                RColorBrewer,
                DescTools,
                grid,
-               caTools)
+               caTools,
+               pROC)
 
 
 #### Load in Data
@@ -126,6 +127,10 @@ summary(medal_logit)
 # Test the model
 test_data$pred_prob = predict(medal_logit, newdata = test_data, type = "response")
 
+roc_curve = roc(test_data$medal, test_data$pred_prob)
+plot(roc_curve)
+auc(roc_curve)
+
 # Plot the probabilities
 height_seq = as.data.frame(seq(min(logit_df$height) - 20, max(logit_df$height) + 20, length.out = 100))
 colnames(height_seq) = "height"
@@ -142,6 +147,10 @@ plot_data |>
 ```
 
 p-value = 6.05e-10 -\> very statistically significant
+
+AUC = 0.5973 -\> just slightly better than random guessing
+
+\^Together these values mean that height and medal are strongly correlated, but the model is not good at predicting based on height alone.
 
 Height Coef = 0.08477
 
