@@ -141,9 +141,36 @@ plot_data = as.data.frame(cbind(height_seq,
 
 plot_data |>
   ggplot(aes(x = height, y = pred_prob2)) +
-  geom_line() +
+  geom_line(size = 1) +
   geom_jitter(data = test_data, aes(x = height, y = pred_prob, color = as.factor(medal)),
-              width = 0, height = 0.1)
+              width = 0, height = 0.1, alpha = 0.6) + 
+  scale_color_manual(
+    values = c("1" = "darkorange", "0" = "steelblue"),
+    labels = c("Non-Medal Winner", "Medal Winner"),
+    name = "Medal Status"
+  ) +
+  labs(
+    title = "Probability of Winning an Olympic Medal by Height",
+    subtitle = "Logistic Regression Model",
+    x = "Height (in)",
+    y = "Predicted Probability"
+  ) + 
+  scale_y_continuous(
+    labels = scales::percent_format(),
+    breaks = seq(0, 1, 0.20)
+  ) +
+  theme_minimal() + 
+  theme(
+    panel.grid = element_blank(),
+    plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
+    plot.subtitle = element_text(hjust = 0.5, size = 12),
+    axis.title = element_text(size = 12),
+    legend.position = "right",
+    legend.text = element_text(size = 10),
+    legend.title = element_text(size = 11, face = "bold"),
+    legend.background = element_rect(color = "black"),
+    aspect.ratio = 1/2
+  )
 ```
 
 p-value = 6.05e-10 -\> very statistically significant
