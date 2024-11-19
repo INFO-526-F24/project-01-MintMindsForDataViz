@@ -1,11 +1,11 @@
 ---
-title: "Project Title"
+title: "Visualizing the Olympics"
 subtitle: "INFO 526 - Fall 2024 - Project 01"
 author: 
-  - name: "Team name"
+  - name: "MintMindsForDataViz"
     affiliations:
       - name: "School of Information, University of Arizona"
-description: "Project description"
+description: "description"
 format:
    html:
     code-tools: true
