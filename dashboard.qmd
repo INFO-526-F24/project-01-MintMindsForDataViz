@@ -1,0 +1,8 @@
+---
+title: Visualizing the Olympics
+author: by MintMindsForDataViz
+format:
+  dashboard: 
+    orientation: columns
+    theme: yeti
+---
