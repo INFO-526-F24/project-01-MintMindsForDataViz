@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mint Minds For DataViz">
-<meta name="description" content="Project description">
+<meta name="description" content="The project proposal identifies and explores three potential datasets to be used for the project.">
 
-<title>Proposal title – Visualizing the Olympics</title>
+<title>INFO 526 Final Project – Visualizing the Olympics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -4831,13 +4831,13 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Proposal title</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">INFO 526 Final Project</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 <p class="subtitle lead">Proposal</p>
 </div>
 
 <div>
   <div class="description">
-    Project description
+    The project proposal identifies and explores three potential datasets to be used for the project.
   </div>
 </div>
 
@@ -4867,8 +4867,20 @@ vertical-align: -.125em;
 </header>
 
 
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;pacman&quot;</span>)) </span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;pacman&quot;</span>)</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(tidyverse,</span>
+<span id="cb1-5"><a href="#cb1-5"></a>              ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <section id="datasets" class="level2">
 <h2 class="anchored" data-anchor-id="datasets">Datasets</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>olympics <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/athlete_events.csv&quot;</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a>Amazon <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/Amazon Sales.csv&quot;</span>)</span>
+<span id="cb2-3"><a href="#cb2-3"></a>stock_prices <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/big_tech_stock_prices.csv&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="introduction-and-data" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-and-data"><strong>Introduction and data</strong></h2>
@@ -4945,6 +4957,7 @@ vertical-align: -.125em;
 <section id="glimpse-of-data" class="level2">
 <h2 class="anchored" data-anchor-id="glimpse-of-data"><strong>Glimpse of data</strong></h2>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">glimpse</span>(olympics)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 271,116
 Columns: 15
@@ -4964,6 +4977,7 @@ $ Sport  &lt;chr&gt; &quot;Basketball&quot;, &quot;Judo&quot;, &quot;Football&qu
 $ Event  &lt;chr&gt; &quot;Basketball Men&#39;s Basketball&quot;, &quot;Judo Men&#39;s Extra-Lightweight&quot;, …
 $ Medal  &lt;chr&gt; NA, NA, NA, &quot;Gold&quot;, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">glimpse</span>(stock_prices)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 45,088
 Columns: 8
@@ -4976,6 +4990,7 @@ $ close        &lt;dbl&gt; 7.643214, 7.656429, 7.534643, 7.520714, 7.570714, 7.5
 $ adj_close    &lt;dbl&gt; 6.515213, 6.526476, 6.422664, 6.410790, 6.453412, 6.39648…
 $ volume       &lt;int&gt; 493729600, 601904800, 552160000, 477131200, 447610800, 46…</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">glimpse</span>(Amazon)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 128,975
 Columns: 24
@@ -5666,112 +5681,112 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class>
-<div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">---</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="an">title:</span><span class="co"> &quot;Proposal title&quot;</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="an">subtitle:</span><span class="co"> &quot;Proposal&quot;</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="an">author:</span><span class="co"> </span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="co">  - name: &quot;Mint Minds For DataViz&quot;</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="co">    affiliations:</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="co">      - name: &quot;School of Information, University of Arizona&quot;</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="an">description:</span><span class="co"> &quot;Project description&quot;</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="an">format:</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a><span class="co">  html:</span></span>
-<span id="cb4-11"><a href="#cb4-11"></a><span class="co">    code-tools: true</span></span>
-<span id="cb4-12"><a href="#cb4-12"></a><span class="co">    code-overflow: wrap</span></span>
-<span id="cb4-13"><a href="#cb4-13"></a><span class="co">    code-line-numbers: true</span></span>
-<span id="cb4-14"><a href="#cb4-14"></a><span class="co">    embed-resources: true</span></span>
-<span id="cb4-15"><a href="#cb4-15"></a><span class="an">editor:</span><span class="co"> visual</span></span>
-<span id="cb4-16"><a href="#cb4-16"></a><span class="an">code-annotations:</span><span class="co"> hover</span></span>
-<span id="cb4-17"><a href="#cb4-17"></a><span class="an">execute:</span></span>
-<span id="cb4-18"><a href="#cb4-18"></a><span class="co">  warning: false</span></span>
-<span id="cb4-19"><a href="#cb4-19"></a><span class="co">---</span></span>
-<span id="cb4-20"><a href="#cb4-20"></a></span>
-<span id="cb4-23"><a href="#cb4-23"></a><span class="in">```{r}</span></span>
-<span id="cb4-24"><a href="#cb4-24"></a><span class="co">#| label: load-pkgs</span></span>
-<span id="cb4-25"><a href="#cb4-25"></a><span class="co">#| message: false</span></span>
-<span id="cb4-26"><a href="#cb4-26"></a></span>
-<span id="cb4-27"><a href="#cb4-27"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;pacman&quot;</span>)) </span>
-<span id="cb4-28"><a href="#cb4-28"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;pacman&quot;</span>)</span>
-<span id="cb4-29"><a href="#cb4-29"></a></span>
-<span id="cb4-30"><a href="#cb4-30"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(tidyverse,</span>
-<span id="cb4-31"><a href="#cb4-31"></a>              ggplot2)</span>
-<span id="cb4-32"><a href="#cb4-32"></a><span class="in">```</span></span>
-<span id="cb4-33"><a href="#cb4-33"></a></span>
-<span id="cb4-34"><a href="#cb4-34"></a><span class="fu">## Datasets</span></span>
-<span id="cb4-35"><a href="#cb4-35"></a></span>
-<span id="cb4-38"><a href="#cb4-38"></a><span class="in">```{r}</span></span>
-<span id="cb4-39"><a href="#cb4-39"></a><span class="co">#| label: load-dataset</span></span>
-<span id="cb4-40"><a href="#cb4-40"></a><span class="co">#| message: false</span></span>
-<span id="cb4-41"><a href="#cb4-41"></a></span>
-<span id="cb4-42"><a href="#cb4-42"></a>olympics <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/athlete_events.csv&quot;</span>)</span>
-<span id="cb4-43"><a href="#cb4-43"></a>Amazon <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/Amazon Sales.csv&quot;</span>)</span>
-<span id="cb4-44"><a href="#cb4-44"></a>stock_prices <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/big_tech_stock_prices.csv&quot;</span>)</span>
-<span id="cb4-45"><a href="#cb4-45"></a><span class="in">```</span></span>
-<span id="cb4-46"><a href="#cb4-46"></a></span>
-<span id="cb4-47"><a href="#cb4-47"></a><span class="fu">## **Introduction and data**</span></span>
-<span id="cb4-48"><a href="#cb4-48"></a></span>
-<span id="cb4-49"><a href="#cb4-49"></a><span class="fu">### Olympic Data Set (athlete_events.csv) \&lt;-- SELECTED DATA SET</span></span>
-<span id="cb4-50"><a href="#cb4-50"></a></span>
-<span id="cb4-51"><a href="#cb4-51"></a>Our data set comes from 2024-08-06 tidytuesday, and contains data from every Olympic Games ranging from Athens 1896 to Rio 2016. The data set is 271,116 rows by 15 columns and contains data for every Olympic medal winner such as their name, sex, country, height, weight, and games they won the medal at.</span>
-<span id="cb4-52"><a href="#cb4-52"></a></span>
-<span id="cb4-53"><a href="#cb4-53"></a>It is important to note that winter and summer games were held in the same year up until 1992. From 1992 onward they were staggered by two years.</span>
-<span id="cb4-54"><a href="#cb4-54"></a></span>
-<span id="cb4-55"><a href="#cb4-55"></a><span class="fu">### Big Tech Stock Prices (big_tech_stock_prices.csv)</span></span>
-<span id="cb4-56"><a href="#cb4-56"></a></span>
-<span id="cb4-57"><a href="#cb4-57"></a>Bit tech stock price dataset from 2023-02-07 tidytuesday. The data has 45089 rows and 8 columns. Rows has the stock stock symbol, date, open, high, low, close, adj close, volume from 2010-01-04 to 2022-12-29 of the following companies: Adobe Inc., Amazon.com, Inc., Salesforce, Inc., Cisco Systems, Inc., Alphabet Inc., IBM, Intel Corporation, Meta Platforms, Inc., Microsoft Corporation, Netflix, Inc., NVIDIA Corporation, Oracle Corporation, Tesla, Inc.</span>
-<span id="cb4-58"><a href="#cb4-58"></a></span>
-<span id="cb4-59"><a href="#cb4-59"></a><span class="fu">### Amazon Sales Report (Amazon Sales.csv)</span></span>
-<span id="cb4-60"><a href="#cb4-60"></a></span>
-<span id="cb4-61"><a href="#cb4-61"></a>We have taken this dataset from kaggle/e-commerce-sales-data, by Anil, and data belongs to Amazon.com. This dataset has 128975 rows and 24 column of data. This dataset provides detailed insights into Amazon sales data, including SKU Code, Design Number, Stock, Category, Size and Color, to help visualization of profitability. The dataset tracks transactions made by customers in an online retail store to analyze purchasing behavior and identify sales trends.</span>
-<span id="cb4-62"><a href="#cb4-62"></a></span>
-<span id="cb4-63"><a href="#cb4-63"></a><span class="fu">## Questions</span></span>
-<span id="cb4-64"><a href="#cb4-64"></a></span>
-<span id="cb4-65"><a href="#cb4-65"></a><span class="fu">### Olympic Data Set (athlete_events.csv)</span></span>
-<span id="cb4-66"><a href="#cb4-66"></a></span>
-<span id="cb4-67"><a href="#cb4-67"></a><span class="ss">1.  </span>Is there an ideal height or weight for each event? If so, what are they and have they changed over time?</span>
-<span id="cb4-68"><a href="#cb4-68"></a><span class="ss">2.  </span>How has the performance of different countries changed over time? Are there any major events that could have led to a change in performance? (medal count over time / gold medals over time)</span>
-<span id="cb4-69"><a href="#cb4-69"></a></span>
-<span id="cb4-70"><a href="#cb4-70"></a><span class="fu">### Big Tech Stock Prices (big_tech_stock_prices.csv)</span></span>
-<span id="cb4-71"><a href="#cb4-71"></a></span>
-<span id="cb4-72"><a href="#cb4-72"></a><span class="ss">1.  </span>Is there any relationship between daily volatility open price and close price with the volume of stocks?</span>
-<span id="cb4-73"><a href="#cb4-73"></a></span>
-<span id="cb4-74"><a href="#cb4-74"></a><span class="ss">-   </span>This question is important because it can help trader to understand the relationship between the volume of stocks and the daily volatility of the stock price.</span>
-<span id="cb4-75"><a href="#cb4-75"></a></span>
-<span id="cb4-76"><a href="#cb4-76"></a><span class="ss">2.  </span>do closing price of stock of Big Tech companies correlate with each other over time?</span>
-<span id="cb4-77"><a href="#cb4-77"></a></span>
-<span id="cb4-78"><a href="#cb4-78"></a><span class="ss">-   </span>This question is important because it provides traders insights of closing prices of Big Tech companies related to volume of stock, it will help them to make investment decisions.</span>
-<span id="cb4-79"><a href="#cb4-79"></a></span>
-<span id="cb4-80"><a href="#cb4-80"></a><span class="fu">### Amazon Sales Report (Amazon Sales.csv)</span></span>
-<span id="cb4-81"><a href="#cb4-81"></a></span>
-<span id="cb4-82"><a href="#cb4-82"></a><span class="ss">1.  </span>What is the distribution of order statuses, and which status is the most common?</span>
-<span id="cb4-83"><a href="#cb4-83"></a><span class="ss">2.  </span>What are the top three product categories with the highest total sales amount?</span>
-<span id="cb4-84"><a href="#cb4-84"></a></span>
-<span id="cb4-85"><a href="#cb4-85"></a><span class="fu">## Analysis plan</span></span>
-<span id="cb4-86"><a href="#cb4-86"></a></span>
-<span id="cb4-87"><a href="#cb4-87"></a><span class="ss">-   </span>A plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).</span>
-<span id="cb4-88"><a href="#cb4-88"></a></span>
-<span id="cb4-89"><a href="#cb4-89"></a><span class="fu">### Olympic Data Set (athlete_events.csv)</span></span>
-<span id="cb4-90"><a href="#cb4-90"></a></span>
-<span id="cb4-91"><a href="#cb4-91"></a><span class="ss">1.  </span>Variables: Sex, Height, Weight, Medal, Sport, Games, Year. We will investigate the distributions of height and weight of athletes across different sports and sexes. We can also investigate if so-called &quot;ideal&quot; heights and weights have changed over time for each event. This question has the potential to raise ethical concerns in that anyone is able to succeed in any sport no matter their height/weight. We just want to investigate whether or not there is a historical trend of success across different events in athletes with certain heights/weights.</span>
-<span id="cb4-92"><a href="#cb4-92"></a><span class="ss">2.  </span>Olympics data variables: Year, Games, Country, Medal, Event. World Events data variables: Name, Year, Month, Country, Type, Place, Impact, Effected Population, Person/Group Responsible, Outcome. We will investigate the change in medal count per country over time; overall and by event. We can use the world events data in order to find a potential cause for observed medal count changes.</span>
-<span id="cb4-93"><a href="#cb4-93"></a></span>
-<span id="cb4-94"><a href="#cb4-94"></a><span class="fu">### Big Tech Stock Prices (big_tech_stock_prices.csv)</span></span>
-<span id="cb4-95"><a href="#cb4-95"></a></span>
-<span id="cb4-96"><a href="#cb4-96"></a>1 . Variables: Date, Open, High, Low, Close, Adj Close, Volume. We will create new variables for daily volatility and investigate the relationship between daily volatility, open price, close price, and volume of stocks. 2. Variables: Date, Close. We’ll examine how the closing price of different Big Tech companies moves together by calculating correlations between them.</span>
-<span id="cb4-97"><a href="#cb4-97"></a></span>
-<span id="cb4-98"><a href="#cb4-98"></a><span class="fu">### Amazon Sales Report (Amazon Sales.csv)</span></span>
-<span id="cb4-99"><a href="#cb4-99"></a></span>
-<span id="cb4-100"><a href="#cb4-100"></a><span class="ss">1.  </span>Amazon Sales Variables: &quot;Status&quot;, &quot;Order ID&quot;. New variable created for counting unique order status is status_frequency. At first part of using data we will check if all the values in Status is clean without any duplicates or spelling errors (suppose &quot;Shipped&quot; or &quot;shipped&quot;). Next approach will be calculating the count of each Status for better understanding of their distribution. For visualization part barplot is created for visualizing the different order status. This question can help dedicated team of company to access the efficiency of the order fulfillment.</span>
-<span id="cb4-101"><a href="#cb4-101"></a></span>
-<span id="cb4-102"><a href="#cb4-102"></a><span class="ss">2.  </span>Variables used: &quot;Category&quot;, &quot;Amount&quot;. Creates a new variable that sums up the Sale Amount for each Product Category &quot;Total_sales_by_product&quot;. First step will be to check if Category and amount variables don&#39;t have missing values, especially in Amount. Then we will group data by product category(Category) and sales_amount(Amount), which will be used to rank category by total_sales_value, at this point we will have Top 3 category which has highest sales amount. At the end for visualization we will create a barplot displaying the total sales for each category, with emphasis on the top three categories. This question can help company to focus on top product category of platform and less on least popular category for revenue management.</span>
-<span id="cb4-103"><a href="#cb4-103"></a></span>
-<span id="cb4-104"><a href="#cb4-104"></a><span class="fu">## **Glimpse of data**</span></span>
-<span id="cb4-105"><a href="#cb4-105"></a></span>
-<span id="cb4-108"><a href="#cb4-108"></a><span class="in">```{r}</span></span>
-<span id="cb4-109"><a href="#cb4-109"></a><span class="fu">glimpse</span>(olympics)</span>
-<span id="cb4-110"><a href="#cb4-110"></a><span class="fu">glimpse</span>(stock_prices)</span>
-<span id="cb4-111"><a href="#cb4-111"></a><span class="fu">glimpse</span>(Amazon)</span>
-<span id="cb4-112"><a href="#cb4-112"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1"></a><span class="co">---</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="an">title:</span><span class="co"> &quot;INFO 526 Final Project&quot;</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="an">subtitle:</span><span class="co"> &quot;Proposal&quot;</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="an">author:</span><span class="co"> </span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="co">  - name: &quot;Mint Minds For DataViz&quot;</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="co">    affiliations:</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="co">      - name: &quot;School of Information, University of Arizona&quot;</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="an">description:</span><span class="co"> &quot;The project proposal identifies and explores three potential datasets to be used for the project.&quot;</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a><span class="an">format:</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a><span class="co">  html:</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a><span class="co">    code-tools: true</span></span>
+<span id="cb9-12"><a href="#cb9-12"></a><span class="co">    code-overflow: wrap</span></span>
+<span id="cb9-13"><a href="#cb9-13"></a><span class="co">    code-line-numbers: true</span></span>
+<span id="cb9-14"><a href="#cb9-14"></a><span class="co">    embed-resources: true</span></span>
+<span id="cb9-15"><a href="#cb9-15"></a><span class="an">editor:</span><span class="co"> visual</span></span>
+<span id="cb9-16"><a href="#cb9-16"></a><span class="an">code-annotations:</span><span class="co"> hover</span></span>
+<span id="cb9-17"><a href="#cb9-17"></a><span class="an">execute:</span></span>
+<span id="cb9-18"><a href="#cb9-18"></a><span class="co">  warning: false</span></span>
+<span id="cb9-19"><a href="#cb9-19"></a><span class="co">---</span></span>
+<span id="cb9-20"><a href="#cb9-20"></a></span>
+<span id="cb9-23"><a href="#cb9-23"></a><span class="in">```{r}</span></span>
+<span id="cb9-24"><a href="#cb9-24"></a><span class="co">#| label: load-pkgs</span></span>
+<span id="cb9-25"><a href="#cb9-25"></a><span class="co">#| message: false</span></span>
+<span id="cb9-26"><a href="#cb9-26"></a></span>
+<span id="cb9-27"><a href="#cb9-27"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;pacman&quot;</span>)) </span>
+<span id="cb9-28"><a href="#cb9-28"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;pacman&quot;</span>)</span>
+<span id="cb9-29"><a href="#cb9-29"></a></span>
+<span id="cb9-30"><a href="#cb9-30"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(tidyverse,</span>
+<span id="cb9-31"><a href="#cb9-31"></a>              ggplot2)</span>
+<span id="cb9-32"><a href="#cb9-32"></a><span class="in">```</span></span>
+<span id="cb9-33"><a href="#cb9-33"></a></span>
+<span id="cb9-34"><a href="#cb9-34"></a><span class="fu">## Datasets</span></span>
+<span id="cb9-35"><a href="#cb9-35"></a></span>
+<span id="cb9-38"><a href="#cb9-38"></a><span class="in">```{r}</span></span>
+<span id="cb9-39"><a href="#cb9-39"></a><span class="co">#| label: load-dataset</span></span>
+<span id="cb9-40"><a href="#cb9-40"></a><span class="co">#| message: false</span></span>
+<span id="cb9-41"><a href="#cb9-41"></a></span>
+<span id="cb9-42"><a href="#cb9-42"></a>olympics <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/athlete_events.csv&quot;</span>)</span>
+<span id="cb9-43"><a href="#cb9-43"></a>Amazon <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/Amazon Sales.csv&quot;</span>)</span>
+<span id="cb9-44"><a href="#cb9-44"></a>stock_prices <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/big_tech_stock_prices.csv&quot;</span>)</span>
+<span id="cb9-45"><a href="#cb9-45"></a><span class="in">```</span></span>
+<span id="cb9-46"><a href="#cb9-46"></a></span>
+<span id="cb9-47"><a href="#cb9-47"></a><span class="fu">## **Introduction and data**</span></span>
+<span id="cb9-48"><a href="#cb9-48"></a></span>
+<span id="cb9-49"><a href="#cb9-49"></a><span class="fu">### Olympic Data Set (athlete_events.csv) \&lt;-- SELECTED DATA SET</span></span>
+<span id="cb9-50"><a href="#cb9-50"></a></span>
+<span id="cb9-51"><a href="#cb9-51"></a>Our data set comes from 2024-08-06 tidytuesday, and contains data from every Olympic Games ranging from Athens 1896 to Rio 2016. The data set is 271,116 rows by 15 columns and contains data for every Olympic medal winner such as their name, sex, country, height, weight, and games they won the medal at.</span>
+<span id="cb9-52"><a href="#cb9-52"></a></span>
+<span id="cb9-53"><a href="#cb9-53"></a>It is important to note that winter and summer games were held in the same year up until 1992. From 1992 onward they were staggered by two years.</span>
+<span id="cb9-54"><a href="#cb9-54"></a></span>
+<span id="cb9-55"><a href="#cb9-55"></a><span class="fu">### Big Tech Stock Prices (big_tech_stock_prices.csv)</span></span>
+<span id="cb9-56"><a href="#cb9-56"></a></span>
+<span id="cb9-57"><a href="#cb9-57"></a>Bit tech stock price dataset from 2023-02-07 tidytuesday. The data has 45089 rows and 8 columns. Rows has the stock stock symbol, date, open, high, low, close, adj close, volume from 2010-01-04 to 2022-12-29 of the following companies: Adobe Inc., Amazon.com, Inc., Salesforce, Inc., Cisco Systems, Inc., Alphabet Inc., IBM, Intel Corporation, Meta Platforms, Inc., Microsoft Corporation, Netflix, Inc., NVIDIA Corporation, Oracle Corporation, Tesla, Inc.</span>
+<span id="cb9-58"><a href="#cb9-58"></a></span>
+<span id="cb9-59"><a href="#cb9-59"></a><span class="fu">### Amazon Sales Report (Amazon Sales.csv)</span></span>
+<span id="cb9-60"><a href="#cb9-60"></a></span>
+<span id="cb9-61"><a href="#cb9-61"></a>We have taken this dataset from kaggle/e-commerce-sales-data, by Anil, and data belongs to Amazon.com. This dataset has 128975 rows and 24 column of data. This dataset provides detailed insights into Amazon sales data, including SKU Code, Design Number, Stock, Category, Size and Color, to help visualization of profitability. The dataset tracks transactions made by customers in an online retail store to analyze purchasing behavior and identify sales trends.</span>
+<span id="cb9-62"><a href="#cb9-62"></a></span>
+<span id="cb9-63"><a href="#cb9-63"></a><span class="fu">## Questions</span></span>
+<span id="cb9-64"><a href="#cb9-64"></a></span>
+<span id="cb9-65"><a href="#cb9-65"></a><span class="fu">### Olympic Data Set (athlete_events.csv)</span></span>
+<span id="cb9-66"><a href="#cb9-66"></a></span>
+<span id="cb9-67"><a href="#cb9-67"></a><span class="ss">1.  </span>Is there an ideal height or weight for each event? If so, what are they and have they changed over time?</span>
+<span id="cb9-68"><a href="#cb9-68"></a><span class="ss">2.  </span>How has the performance of different countries changed over time? Are there any major events that could have led to a change in performance? (medal count over time / gold medals over time)</span>
+<span id="cb9-69"><a href="#cb9-69"></a></span>
+<span id="cb9-70"><a href="#cb9-70"></a><span class="fu">### Big Tech Stock Prices (big_tech_stock_prices.csv)</span></span>
+<span id="cb9-71"><a href="#cb9-71"></a></span>
+<span id="cb9-72"><a href="#cb9-72"></a><span class="ss">1.  </span>Is there any relationship between daily volatility open price and close price with the volume of stocks?</span>
+<span id="cb9-73"><a href="#cb9-73"></a></span>
+<span id="cb9-74"><a href="#cb9-74"></a><span class="ss">-   </span>This question is important because it can help trader to understand the relationship between the volume of stocks and the daily volatility of the stock price.</span>
+<span id="cb9-75"><a href="#cb9-75"></a></span>
+<span id="cb9-76"><a href="#cb9-76"></a><span class="ss">2.  </span>do closing price of stock of Big Tech companies correlate with each other over time?</span>
+<span id="cb9-77"><a href="#cb9-77"></a></span>
+<span id="cb9-78"><a href="#cb9-78"></a><span class="ss">-   </span>This question is important because it provides traders insights of closing prices of Big Tech companies related to volume of stock, it will help them to make investment decisions.</span>
+<span id="cb9-79"><a href="#cb9-79"></a></span>
+<span id="cb9-80"><a href="#cb9-80"></a><span class="fu">### Amazon Sales Report (Amazon Sales.csv)</span></span>
+<span id="cb9-81"><a href="#cb9-81"></a></span>
+<span id="cb9-82"><a href="#cb9-82"></a><span class="ss">1.  </span>What is the distribution of order statuses, and which status is the most common?</span>
+<span id="cb9-83"><a href="#cb9-83"></a><span class="ss">2.  </span>What are the top three product categories with the highest total sales amount?</span>
+<span id="cb9-84"><a href="#cb9-84"></a></span>
+<span id="cb9-85"><a href="#cb9-85"></a><span class="fu">## Analysis plan</span></span>
+<span id="cb9-86"><a href="#cb9-86"></a></span>
+<span id="cb9-87"><a href="#cb9-87"></a><span class="ss">-   </span>A plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).</span>
+<span id="cb9-88"><a href="#cb9-88"></a></span>
+<span id="cb9-89"><a href="#cb9-89"></a><span class="fu">### Olympic Data Set (athlete_events.csv)</span></span>
+<span id="cb9-90"><a href="#cb9-90"></a></span>
+<span id="cb9-91"><a href="#cb9-91"></a><span class="ss">1.  </span>Variables: Sex, Height, Weight, Medal, Sport, Games, Year. We will investigate the distributions of height and weight of athletes across different sports and sexes. We can also investigate if so-called &quot;ideal&quot; heights and weights have changed over time for each event. This question has the potential to raise ethical concerns in that anyone is able to succeed in any sport no matter their height/weight. We just want to investigate whether or not there is a historical trend of success across different events in athletes with certain heights/weights.</span>
+<span id="cb9-92"><a href="#cb9-92"></a><span class="ss">2.  </span>Olympics data variables: Year, Games, Country, Medal, Event. World Events data variables: Name, Year, Month, Country, Type, Place, Impact, Effected Population, Person/Group Responsible, Outcome. We will investigate the change in medal count per country over time; overall and by event. We can use the world events data in order to find a potential cause for observed medal count changes.</span>
+<span id="cb9-93"><a href="#cb9-93"></a></span>
+<span id="cb9-94"><a href="#cb9-94"></a><span class="fu">### Big Tech Stock Prices (big_tech_stock_prices.csv)</span></span>
+<span id="cb9-95"><a href="#cb9-95"></a></span>
+<span id="cb9-96"><a href="#cb9-96"></a>1 . Variables: Date, Open, High, Low, Close, Adj Close, Volume. We will create new variables for daily volatility and investigate the relationship between daily volatility, open price, close price, and volume of stocks. 2. Variables: Date, Close. We’ll examine how the closing price of different Big Tech companies moves together by calculating correlations between them.</span>
+<span id="cb9-97"><a href="#cb9-97"></a></span>
+<span id="cb9-98"><a href="#cb9-98"></a><span class="fu">### Amazon Sales Report (Amazon Sales.csv)</span></span>
+<span id="cb9-99"><a href="#cb9-99"></a></span>
+<span id="cb9-100"><a href="#cb9-100"></a><span class="ss">1.  </span>Amazon Sales Variables: &quot;Status&quot;, &quot;Order ID&quot;. New variable created for counting unique order status is status_frequency. At first part of using data we will check if all the values in Status is clean without any duplicates or spelling errors (suppose &quot;Shipped&quot; or &quot;shipped&quot;). Next approach will be calculating the count of each Status for better understanding of their distribution. For visualization part barplot is created for visualizing the different order status. This question can help dedicated team of company to access the efficiency of the order fulfillment.</span>
+<span id="cb9-101"><a href="#cb9-101"></a></span>
+<span id="cb9-102"><a href="#cb9-102"></a><span class="ss">2.  </span>Variables used: &quot;Category&quot;, &quot;Amount&quot;. Creates a new variable that sums up the Sale Amount for each Product Category &quot;Total_sales_by_product&quot;. First step will be to check if Category and amount variables don&#39;t have missing values, especially in Amount. Then we will group data by product category(Category) and sales_amount(Amount), which will be used to rank category by total_sales_value, at this point we will have Top 3 category which has highest sales amount. At the end for visualization we will create a barplot displaying the total sales for each category, with emphasis on the top three categories. This question can help company to focus on top product category of platform and less on least popular category for revenue management.</span>
+<span id="cb9-103"><a href="#cb9-103"></a></span>
+<span id="cb9-104"><a href="#cb9-104"></a><span class="fu">## **Glimpse of data**</span></span>
+<span id="cb9-105"><a href="#cb9-105"></a></span>
+<span id="cb9-108"><a href="#cb9-108"></a><span class="in">```{r}</span></span>
+<span id="cb9-109"><a href="#cb9-109"></a><span class="fu">glimpse</span>(olympics)</span>
+<span id="cb9-110"><a href="#cb9-110"></a><span class="fu">glimpse</span>(stock_prices)</span>
+<span id="cb9-111"><a href="#cb9-111"></a><span class="fu">glimpse</span>(Amazon)</span>
+<span id="cb9-112"><a href="#cb9-112"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
