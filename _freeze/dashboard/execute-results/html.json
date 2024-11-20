@@ -2,7 +2,7 @@
   "hash": "cb24aa875ef3a763d3bc176f490726a5",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: Visualizing the Olympics\nauthor: by MintMindsForDataViz\nformat:\n  dashboard: \n    orientation: columns\n    theme: yeti\n---\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n\n## Column\n\n### Row\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](dashboard_files/figure-html/unnamed-chunk-4-1.png){width=768}\n:::\n:::\n\n\n\n### Row\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](dashboard_files/figure-html/unnamed-chunk-5-1.png){width=768}\n:::\n:::\n\n\n\n## Column\n",
+    "markdown": "---\ntitle: Visualizing the Olympics\nauthor: by MintMindsForDataViz\nformat:\n  dashboard: \n    orientation: columns\n    theme: yeti\n---\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n\n\n## Column\n\n### Row\n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](dashboard_files/figure-html/unnamed-chunk-4-1.png){width=768}\n:::\n:::\n\n\n\n\n### Row\n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](dashboard_files/figure-html/unnamed-chunk-5-1.png){width=768}\n:::\n:::\n\n\n\n\n## Column\n",
     "supporting": [
       "dashboard_files"
     ],
