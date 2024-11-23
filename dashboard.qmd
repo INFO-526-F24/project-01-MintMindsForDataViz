@@ -21,7 +21,8 @@ pacman::p_load(tidyverse,
                DescTools,
                grid,
                caTools,
-               pROC)
+               pROC,
+               plotly)
 ```
 
 ```{r}
@@ -62,7 +63,7 @@ basketball_summary_stats_by_group = mens_basketball |>
   summarize(mode = Mode(Height_Inches, na.rm = TRUE)) |>
   ungroup()
 
-# violin plot
+# density plot
 height_dens = mens_basketball|>
   ggplot(aes(x = Height_Inches, y = Decade, fill = Decade)) +
   geom_density_ridges() +
@@ -131,15 +132,17 @@ roc_curve_auc = auc(roc_curve)
 # Plot the probabilities
 height_seq = as.data.frame(seq(min(logit_df$height) - 20, max(logit_df$height) + 20, length.out = 100))
 colnames(height_seq) = "height"
-pred_prob2 = predict(medal_logit, newdata = height_seq, type = "response")
+predicted_probability = predict(medal_logit, newdata = height_seq, type = "response")
 
 plot_data = as.data.frame(cbind(height_seq,
-                                pred_prob2))
+                                predicted_probability))
 
 height_logit_plot = plot_data |>
-  ggplot(aes(x = height, y = pred_prob2)) +
-  geom_line(size = 1) +
-  geom_jitter(data = test_data, aes(x = height, y = pred_prob, color = as.factor(medal)),
+  ggplot(aes(x = height, y = predicted_probability)) +
+  geom_line(size = 1, color = "black") +
+  geom_point(aes(text = paste("Height:", round(height, 1), "<br>Predicted Probability:", scales::percent(predicted_probability))),
+             size = 0.3, color = "black") +
+  geom_jitter(data = test_data, aes(x = height, y = pred_prob, color = as.factor(medal), text = paste("Height:", round(height, 1), "<br>", ifelse(medal == 1, "Medal", "No Medal"))),
               width = 0, height = 0.1, alpha = 0.6) + 
   scale_color_manual(
     values = c("1" = "darkorange", "0" = "steelblue"),
@@ -168,6 +171,8 @@ height_logit_plot = plot_data |>
     legend.background = element_rect(color = "black"),
     aspect.ratio = 1/2
   )
+
+height_logit_plot_hover = ggplotly(height_logit_plot, tooltip = "text")
 ```
 
 ## Column
@@ -181,7 +186,7 @@ height_dens
 ### Row
 
 ```{r}
-height_logit_plot
+height_logit_plot_hover
 ```
 
 ## Column
