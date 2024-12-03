@@ -8,6 +8,7 @@ pacman::p_load(tidyverse,
 ```
 
 ```{r}
+
 olympics = read_csv(here("data", "athlete_events.csv"))
 
 basketball = subset(olympics, Sport == 'Basketball')
