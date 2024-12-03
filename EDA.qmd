@@ -1,0 +1,18 @@
+```{r}
+# Load in packages
+if (!require("pacman")) 
+  install.packages("pacman")
+
+pacman::p_load(tidyverse,
+               here)
+```
+
+```{r}
+olympics = read_csv(here("data", "athlete_events.csv"))
+
+basketball = subset(olympics, Sport == 'Basketball')
+
+basketball |>
+  ggplot(aes(x = Year, y = Height)) +
+  geom_point()
+```
