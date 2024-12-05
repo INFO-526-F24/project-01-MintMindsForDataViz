@@ -1,4 +1,6 @@
 ```{r}
+#| warning: false
+#| message: false
 # Load in packages
 if (!require("pacman")) 
   install.packages("pacman")
@@ -8,6 +10,8 @@ pacman::p_load(tidyverse,
 ```
 
 ```{r}
+#| warning: false
+#| message: false
 
 olympics = read_csv(here("data", "athlete_events.csv"))
 
