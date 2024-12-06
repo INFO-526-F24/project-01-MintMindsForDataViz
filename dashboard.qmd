@@ -269,11 +269,11 @@ height_logit_plot_hover
 ### Row
 
 ```{r}
-p1
+#p1
 ```
 
 ### Row
 
 ```{r}
-p2
+#p2
 ```
