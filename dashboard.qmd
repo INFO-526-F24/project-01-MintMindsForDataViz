@@ -222,7 +222,7 @@ p1 <- ggplot(top_country_data, aes(x = Year, y = Total, color = NOC, group = NOC
   geom_point(size = 2) +
   geom_vline(data = world_events, aes(xintercept = Year), linetype = "dashed", color = "red") +
   geom_text(data = world_events, aes(x = Year, y = max(top_country_data$Total), label = Event),
-            angle = 90, vjust = -0.3, hjust = 0.7, color = "red", size = 4, inherit.aes = FALSE) +
+            angle = 90, vjust = -0.3, color = "red", size = 4, inherit.aes = FALSE) +
   scale_color_brewer(palette = "Set3") +
   theme_minimal(base_size = 15) +
   labs(
