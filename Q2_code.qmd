@@ -89,3 +89,32 @@ p2 <- ggplot(top_country_data, aes(x = Year, y = Gold, fill = NOC)) +
 p2
 
 ```
+
+```{r}
+# Create a medal count data frame by Team and Medal
+medal_counts_team <- olympics %>%
+  filter(!is.na(Medal)) %>%
+  group_by(Team, Medal) %>%
+  summarize(Count = length(Medal), .groups = "drop")
+
+# Identify the top 10 teams by total medals
+top_teams <- medal_counts_team %>%
+  group_by(Team) %>%
+  summarize(Total_Medals = sum(Count), .groups = "drop") %>%
+  arrange(desc(Total_Medals)) %>%
+  slice_head(n = 10) %>%
+  pull(Team)
+
+# Filter the medal_counts_team to include only the top 10 Countries
+medal_counts_team_top10 <- medal_counts_team %>%
+  filter(Team %in% top_teams)
+
+# Plot the top 10 teams only
+ggplot(medal_counts_team_top10, aes(x = Team, y = Count, fill = Medal)) +
+  geom_col() +
+  coord_flip() +
+  labs(title = "Medal Counts by Top 10 Countries",
+       x = "Team",
+       y = "Medal Count") +
+  theme_minimal()
+```
