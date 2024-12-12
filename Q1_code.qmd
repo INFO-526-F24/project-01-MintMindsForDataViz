@@ -1,9 +1,5 @@
 # Visualization 1
 
-Violin plot of height by decade for Mens basketball players
-
-Ideas: In dashboard could filter height by country and decade
-
 ```{r}
 #| label: Visualization 1
 #| warning: False
