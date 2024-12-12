@@ -1,11 +1,11 @@
 ---
-title: "Project Title"
-subtitle: "INFO 526 - Fall 2024 - Project 01"
+title: "Visualizing the Olympics"
+subtitle: "INFO 526 - Fall 2024 - Final Project"
 author: 
-  - name: "Team name"
+  - name: "MintMindsForDataViz"
     affiliations:
       - name: "School of Information, University of Arizona"
-description: "Project description"
+description: "This project leverages historical data from Summer Olympic Games to uncover insights into trends in athlete characteristics and country-level performance."
 format:
    html:
     code-tools: true
@@ -19,4 +19,12 @@ execute:
 
 ## Abstract
 
-Add project abstract here.
+This project analyzes data from past Summer Olympics to explore patterns and trends in athlete performance and demographics, focusing on basketball and country-level performance. The first question investigates the evolution of basketball players' heights over time, utilizing a density plot to visualize changes and a logistic regression model to assess how height influences the probability of winning a medal. Results reveal significant trends in player height and its relationship with competitive success. The second question examines how countries' performance has shifted across Olympic Games, with particular attention to the potential influence of major world events. \[Details about findings related to countries’ performance will be added once analysis is complete.\] Together, these analyses provide insight into the interplay between individual attributes and global factors in shaping Olympic outcomes.
+
+## Introduction and Data
+
+## Methodology
+
+## Results
+
+## Discussion

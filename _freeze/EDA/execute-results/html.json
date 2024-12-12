@@ -1,0 +1,17 @@
+{
+  "hash": "2316c5ef68eebf9d050e32b0f45e69f7",
+  "result": {
+    "engine": "knitr",
+    "markdown": "::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](EDA_files/figure-html/unnamed-chunk-2-1.png){width=768}\n:::\n:::\n",
+    "supporting": [
+      "EDA_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

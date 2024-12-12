@@ -2,42 +2,42 @@
   {
     "objectID": "proposal.html",
     "href": "proposal.html",
-    "title": "Proposal title",
+    "title": "INFO 526 Final Project",
     "section": "",
     "text": "if (!require(\"pacman\")) \n  install.packages(\"pacman\")\n\npacman::p_load(tidyverse,\n              ggplot2)"
   },
   {
     "objectID": "proposal.html#datasets",
     "href": "proposal.html#datasets",
-    "title": "Proposal title",
+    "title": "INFO 526 Final Project",
     "section": "Datasets",
     "text": "Datasets\n\nolympics = read.csv(\"data/athlete_events.csv\")\nAmazon = read.csv(\"data/Amazon Sales.csv\")\nstock_prices = read.csv(\"data/big_tech_stock_prices.csv\")"
   },
   {
     "objectID": "proposal.html#introduction-and-data",
     "href": "proposal.html#introduction-and-data",
-    "title": "Proposal title",
+    "title": "INFO 526 Final Project",
     "section": "Introduction and data",
-    "text": "Introduction and data\n\nOlympic Data Set (athlete_events.csv)\nOur data set comes from 2024-08-06 tidytuesday, and contains data from every Olympic Games ranging from Athens 1896 to Rio 2016. The data set is 271,116 rows by 15 columns and contains data for every Olympic medal winner such as their name, sex, country, height, weight, and games they won the medal at.\nIt is important to note that winter and summer games were held in the same year up until 1992. From 1992 onward they were staggered by two years.\n\n\nBig Tech Stock Prices (big_tech_stock_prices.csv)\nBit tech stock price dataset from 2023-02-07 tidytuesday. The data has 45089 rows and 8 columns. Rows has the stock stock symbol, date, open, high, low, close, adj close, volume from 2010-01-04 to 2022-12-29 of the following companies: Adobe Inc., Amazon.com, Inc., Salesforce, Inc., Cisco Systems, Inc., Alphabet Inc., IBM, Intel Corporation, Meta Platforms, Inc., Microsoft Corporation, Netflix, Inc., NVIDIA Corporation, Oracle Corporation, Tesla, Inc.\n\n\nAmazon Sales Report (Amazon Sales.csv)\nWe have taken this dataset from kaggle/e-commerce-sales-data, by Anil, and data belongs to Amazon.com. This dataset has 128975 rows and 24 column of data. This dataset provides detailed insights into Amazon sales data, including SKU Code, Design Number, Stock, Category, Size and Color, to help visualization of profitability. The dataset tracks transactions made by customers in an online retail store to analyze purchasing behavior and identify sales trends."
+    "text": "Introduction and data\n\nOlympic Data Set (athlete_events.csv) &lt;– SELECTED DATA SET\nOur data set comes from 2024-08-06 tidytuesday, and contains data from every Olympic Games ranging from Athens 1896 to Rio 2016. The data set is 271,116 rows by 15 columns and contains data for every Olympic medal winner such as their name, sex, country, height, weight, and games they won the medal at.\nIt is important to note that winter and summer games were held in the same year up until 1992. From 1992 onward they were staggered by two years.\n\n\nBig Tech Stock Prices (big_tech_stock_prices.csv)\nBit tech stock price dataset from 2023-02-07 tidytuesday. The data has 45089 rows and 8 columns. Rows has the stock stock symbol, date, open, high, low, close, adj close, volume from 2010-01-04 to 2022-12-29 of the following companies: Adobe Inc., Amazon.com, Inc., Salesforce, Inc., Cisco Systems, Inc., Alphabet Inc., IBM, Intel Corporation, Meta Platforms, Inc., Microsoft Corporation, Netflix, Inc., NVIDIA Corporation, Oracle Corporation, Tesla, Inc.\n\n\nAmazon Sales Report (Amazon Sales.csv)\nWe have taken this dataset from kaggle/e-commerce-sales-data, by Anil, and data belongs to Amazon.com. This dataset has 128975 rows and 24 column of data. This dataset provides detailed insights into Amazon sales data, including SKU Code, Design Number, Stock, Category, Size and Color, to help visualization of profitability. The dataset tracks transactions made by customers in an online retail store to analyze purchasing behavior and identify sales trends."
   },
   {
     "objectID": "proposal.html#questions",
     "href": "proposal.html#questions",
-    "title": "Proposal title",
+    "title": "INFO 526 Final Project",
     "section": "Questions",
     "text": "Questions\n\nOlympic Data Set (athlete_events.csv)\n\nIs there an ideal height or weight for each event? If so, what are they and have they changed over time?\nHow has the performance of different countries changed over time? Are there any major events that could have led to a change in performance? (medal count over time / gold medals over time)\n\n\n\nBig Tech Stock Prices (big_tech_stock_prices.csv)\n\nIs there any relationship between daily volatility open price and close price with the volume of stocks?\n\n\nThis question is important because it can help trader to understand the relationship between the volume of stocks and the daily volatility of the stock price.\n\n\ndo closing price of stock of Big Tech companies correlate with each other over time?\n\n\nThis question is important because it provides traders insights of closing prices of Big Tech companies related to volume of stock, it will help them to make investment decisions.\n\n\n\nAmazon Sales Report (Amazon Sales.csv)\n\nWhat is the distribution of order statuses, and which status is the most common?\nWhat are the top three product categories with the highest total sales amount?"
   },
   {
     "objectID": "proposal.html#analysis-plan",
     "href": "proposal.html#analysis-plan",
-    "title": "Proposal title",
+    "title": "INFO 526 Final Project",
     "section": "Analysis plan",
     "text": "Analysis plan\n\nA plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).\n\n\nOlympic Data Set (athlete_events.csv)\n\nVariables: Sex, Height, Weight, Medal, Sport, Games, Year. We will investigate the distributions of height and weight of athletes across different sports and sexes. We can also investigate if so-called “ideal” heights and weights have changed over time for each event. This question has the potential to raise ethical concerns in that anyone is able to succeed in any sport no matter their height/weight. We just want to investigate whether or not there is a historical trend of success across different events in athletes with certain heights/weights.\nOlympics data variables: Year, Games, Country, Medal, Event. World Events data variables: Name, Year, Month, Country, Type, Place, Impact, Effected Population, Person/Group Responsible, Outcome. We will investigate the change in medal count per country over time; overall and by event. We can use the world events data in order to find a potential cause for observed medal count changes.\n\n\n\nBig Tech Stock Prices (big_tech_stock_prices.csv)\n1 . Variables: Date, Open, High, Low, Close, Adj Close, Volume. We will create new variables for daily volatility and investigate the relationship between daily volatility, open price, close price, and volume of stocks. 2. Variables: Date, Close. We’ll examine how the closing price of different Big Tech companies moves together by calculating correlations between them.\n\n\nAmazon Sales Report (Amazon Sales.csv)\n\nAmazon Sales Variables: “Status”, “Order ID”. New variable created for counting unique order status is status_frequency. At first part of using data we will check if all the values in Status is clean without any duplicates or spelling errors (suppose “Shipped” or “shipped”). Next approach will be calculating the count of each Status for better understanding of their distribution. For visualization part barplot is created for visualizing the different order status. This question can help dedicated team of company to access the efficiency of the order fulfillment.\nVariables used: “Category”, “Amount”. Creates a new variable that sums up the Sale Amount for each Product Category “Total_sales_by_product”. First step will be to check if Category and amount variables don’t have missing values, especially in Amount. Then we will group data by product category(Category) and sales_amount(Amount), which will be used to rank category by total_sales_value, at this point we will have Top 3 category which has highest sales amount. At the end for visualization we will create a barplot displaying the total sales for each category, with emphasis on the top three categories. This question can help company to focus on top product category of platform and less on least popular category for revenue management."
   },
   {
     "objectID": "proposal.html#glimpse-of-data",
     "href": "proposal.html#glimpse-of-data",
-    "title": "Proposal title",
+    "title": "INFO 526 Final Project",
     "section": "Glimpse of data",
     "text": "Glimpse of data\n\nglimpse(olympics)\n\nRows: 271,116\nColumns: 15\n$ ID     &lt;int&gt; 1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, …\n$ Name   &lt;chr&gt; \"A Dijiang\", \"A Lamusi\", \"Gunnar Nielsen Aaby\", \"Edgar Lindenau…\n$ Sex    &lt;chr&gt; \"M\", \"M\", \"M\", \"M\", \"F\", \"F\", \"F\", \"F\", \"F\", \"F\", \"M\", \"M\", \"M\"…\n$ Age    &lt;int&gt; 24, 23, 24, 34, 21, 21, 25, 25, 27, 27, 31, 31, 31, 31, 33, 33,…\n$ Height &lt;int&gt; 180, 170, NA, NA, 185, 185, 185, 185, 185, 185, 188, 188, 188, …\n$ Weight &lt;dbl&gt; 80, 60, NA, NA, 82, 82, 82, 82, 82, 82, 75, 75, 75, 75, 75, 75,…\n$ Team   &lt;chr&gt; \"China\", \"China\", \"Denmark\", \"Denmark/Sweden\", \"Netherlands\", \"…\n$ NOC    &lt;chr&gt; \"CHN\", \"CHN\", \"DEN\", \"DEN\", \"NED\", \"NED\", \"NED\", \"NED\", \"NED\", …\n$ Games  &lt;chr&gt; \"1992 Summer\", \"2012 Summer\", \"1920 Summer\", \"1900 Summer\", \"19…\n$ Year   &lt;int&gt; 1992, 2012, 1920, 1900, 1988, 1988, 1992, 1992, 1994, 1994, 199…\n$ Season &lt;chr&gt; \"Summer\", \"Summer\", \"Summer\", \"Summer\", \"Winter\", \"Winter\", \"Wi…\n$ City   &lt;chr&gt; \"Barcelona\", \"London\", \"Antwerpen\", \"Paris\", \"Calgary\", \"Calgar…\n$ Sport  &lt;chr&gt; \"Basketball\", \"Judo\", \"Football\", \"Tug-Of-War\", \"Speed Skating\"…\n$ Event  &lt;chr&gt; \"Basketball Men's Basketball\", \"Judo Men's Extra-Lightweight\", …\n$ Medal  &lt;chr&gt; NA, NA, NA, \"Gold\", NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n\nglimpse(stock_prices)\n\nRows: 45,088\nColumns: 8\n$ stock_symbol &lt;chr&gt; \"AAPL\", \"AAPL\", \"AAPL\", \"AAPL\", \"AAPL\", \"AAPL\", \"AAPL\", \"…\n$ date         &lt;chr&gt; \"2010-01-04\", \"2010-01-05\", \"2010-01-06\", \"2010-01-07\", \"…\n$ open         &lt;dbl&gt; 7.622500, 7.664286, 7.656429, 7.562500, 7.510714, 7.60000…\n$ high         &lt;dbl&gt; 7.660714, 7.699643, 7.686786, 7.571429, 7.571429, 7.60714…\n$ low          &lt;dbl&gt; 7.585000, 7.616071, 7.526786, 7.466071, 7.466429, 7.44464…\n$ close        &lt;dbl&gt; 7.643214, 7.656429, 7.534643, 7.520714, 7.570714, 7.50392…\n$ adj_close    &lt;dbl&gt; 6.515213, 6.526476, 6.422664, 6.410790, 6.453412, 6.39648…\n$ volume       &lt;int&gt; 493729600, 601904800, 552160000, 477131200, 447610800, 46…\n\nglimpse(Amazon)\n\nRows: 128,975\nColumns: 24\n$ index              &lt;int&gt; 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1…\n$ Order.ID           &lt;chr&gt; \"405-8078784-5731545\", \"171-9198151-1101146\", \"404-…\n$ Date               &lt;chr&gt; \"04-30-22\", \"04-30-22\", \"04-30-22\", \"04-30-22\", \"04…\n$ Status             &lt;chr&gt; \"Cancelled\", \"Shipped - Delivered to Buyer\", \"Shipp…\n$ Fulfilment         &lt;chr&gt; \"Merchant\", \"Merchant\", \"Amazon\", \"Merchant\", \"Amaz…\n$ Sales.Channel      &lt;chr&gt; \"Amazon.in\", \"Amazon.in\", \"Amazon.in\", \"Amazon.in\",…\n$ ship.service.level &lt;chr&gt; \"Standard\", \"Standard\", \"Expedited\", \"Standard\", \"E…\n$ Style              &lt;chr&gt; \"SET389\", \"JNE3781\", \"JNE3371\", \"J0341\", \"JNE3671\",…\n$ SKU                &lt;chr&gt; \"SET389-KR-NP-S\", \"JNE3781-KR-XXXL\", \"JNE3371-KR-XL…\n$ Category           &lt;chr&gt; \"Set\", \"kurta\", \"kurta\", \"Western Dress\", \"Top\", \"S…\n$ Size               &lt;chr&gt; \"S\", \"3XL\", \"XL\", \"L\", \"3XL\", \"XL\", \"L\", \"S\", \"3XL\"…\n$ ASIN               &lt;chr&gt; \"B09KXVBD7Z\", \"B09K3WFS32\", \"B07WV4JV4D\", \"B099NRCT…\n$ Courier.Status     &lt;chr&gt; \"\", \"Shipped\", \"Shipped\", \"\", \"Shipped\", \"Shipped\",…\n$ Qty                &lt;int&gt; 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, …\n$ currency           &lt;chr&gt; \"INR\", \"INR\", \"INR\", \"INR\", \"INR\", \"INR\", \"INR\", \"I…\n$ Amount             &lt;dbl&gt; 647.62, 406.00, 329.00, 753.33, 574.00, 824.00, 653…\n$ ship.city          &lt;chr&gt; \"MUMBAI\", \"BENGALURU\", \"NAVI MUMBAI\", \"PUDUCHERRY\",…\n$ ship.state         &lt;chr&gt; \"MAHARASHTRA\", \"KARNATAKA\", \"MAHARASHTRA\", \"PUDUCHE…\n$ ship.postal.code   &lt;dbl&gt; 400081, 560085, 410210, 605008, 600073, 201102, 160…\n$ ship.country       &lt;chr&gt; \"IN\", \"IN\", \"IN\", \"IN\", \"IN\", \"IN\", \"IN\", \"IN\", \"IN…\n$ promotion.ids      &lt;chr&gt; \"\", \"Amazon PLCC Free-Financing Universal Merchant …\n$ B2B                &lt;chr&gt; \"False\", \"False\", \"True\", \"False\", \"False\", \"False\"…\n$ fulfilled.by       &lt;chr&gt; \"Easy Ship\", \"Easy Ship\", \"\", \"Easy Ship\", \"\", \"\", …\n$ Unnamed..22        &lt;chr&gt; \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",…"
   },
@@ -51,63 +51,63 @@
   {
     "objectID": "presentation.html#quarto",
     "href": "presentation.html#quarto",
-    "title": "Project title",
-    "section": "",
-    "text": "The presentation is created using the Quarto CLI\n## sets the start of a new slide"
+    "title": "Visualizing the Olympics",
+    "section": "Quarto",
+    "text": "Quarto\n\nThe presentation is created using the Quarto CLI\n## sets the start of a new slide"
   },
   {
     "objectID": "presentation.html#layouts",
     "href": "presentation.html#layouts",
-    "title": "Project title",
-    "section": "",
-    "text": "You can use plain text\n\n\n\nor bullet points1\n\n\nor in two columns\n\n\n\nlike\nthis"
+    "title": "Visualizing the Olympics",
+    "section": "Layouts",
+    "text": "Layouts\nYou can use plain text\n\n\n\nor bullet points1\n\n\nor in two columns\n\n\nlike\nthis\n\nAnd add footnotes"
   },
   {
     "objectID": "presentation.html#code",
     "href": "presentation.html#code",
-    "title": "Project title",
-    "section": "",
-    "text": "# A tibble: 2 × 5\n  term        estimate std.error statistic       p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n1 (Intercept)   25.3      3.08        8.22 0.00000000358\n2 speed         -0.116    0.0642     -1.81 0.0806       \n\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1    0.0983        0.0682  5.82      3.27  0.0806     1  -101.  207.  212.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;"
+    "title": "Visualizing the Olympics",
+    "section": "Code",
+    "text": "Code\n\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic       p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n1 (Intercept)   25.3      3.08        8.22 0.00000000358\n2 speed         -0.116    0.0642     -1.81 0.0806       \n\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1    0.0983        0.0682  5.82      3.27  0.0806     1  -101.  207.  212.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;"
   },
   {
     "objectID": "presentation.html#plots",
     "href": "presentation.html#plots",
-    "title": "Project title",
+    "title": "Visualizing the Olympics",
     "section": "Plots",
     "text": "Plots"
   },
   {
     "objectID": "presentation.html#plot-and-text",
     "href": "presentation.html#plot-and-text",
-    "title": "Project title",
-    "section": "",
-    "text": "Some text\ngoes here"
+    "title": "Visualizing the Olympics",
+    "section": "Plot and text",
+    "text": "Plot and text\n\n\n\nSome text\ngoes here"
   },
   {
     "objectID": "presentation.html#tables",
     "href": "presentation.html#tables",
-    "title": "Project title",
+    "title": "Visualizing the Olympics",
     "section": "Tables",
     "text": "Tables\nIf you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n\n\nAdelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n\n\nAdelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale"
   },
   {
     "objectID": "presentation.html#images",
     "href": "presentation.html#images",
-    "title": "Project title",
+    "title": "Visualizing the Olympics",
     "section": "Images",
-    "text": "Images\n\n\n\nImage credit: Danielle Navarro, Percolate."
+    "text": "Images\n\nImage credit: Danielle Navarro, Percolate."
   },
   {
     "objectID": "presentation.html#math-expressions",
     "href": "presentation.html#math-expressions",
-    "title": "Project title",
+    "title": "Visualizing the Olympics",
     "section": "Math Expressions",
     "text": "Math Expressions\nYou can write LaTeX math expressions inside a pair of dollar signs, e.g. $\\alpha+\\beta$ renders \\(\\alpha + \\beta\\). You can use the display style with double dollar signs:\n$$\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i$$\n\\[\n\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i\n\\]\nLimitations:\n\nThe source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting $$ must appear in the very beginning of a line, followed immediately by a non-space character, and the ending $$ must be at the end of a line, led by a non-space character;\nThere should not be spaces after the opening $ or before the closing $."
   },
   {
     "objectID": "presentation.html#feeling-adventurous",
     "href": "presentation.html#feeling-adventurous",
-    "title": "Project title",
+    "title": "Visualizing the Olympics",
     "section": "Feeling adventurous?",
     "text": "Feeling adventurous?\n\nYou are welcomed to use the default styling of the slides. In fact, that’s what I expect majority of you will do. You will differentiate yourself with the content of your presentation.\nBut some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs."
   },
@@ -121,16 +121,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Project Title",
+    "title": "Visualizing the Olympics",
     "section": "",
-    "text": "Add project abstract here."
+    "text": "This project analyzes data from past Summer Olympics to explore patterns and trends in athlete performance and demographics, focusing on basketball and country-level performance. The first question investigates the evolution of basketball players’ heights over time, utilizing a density plot to visualize changes and a logistic regression model to assess how height influences the probability of winning a medal. Results reveal significant trends in player height and its relationship with competitive success. The second question examines how countries’ performance has shifted across Olympic Games, with particular attention to the potential influence of major world events. [Details about findings related to countries’ performance will be added once analysis is complete.] Together, these analyses provide insight into the interplay between individual attributes and global factors in shaping Olympic outcomes."
   },
   {
     "objectID": "index.html#abstract",
     "href": "index.html#abstract",
-    "title": "Project Title",
+    "title": "Visualizing the Olympics",
     "section": "",
-    "text": "Add project abstract here."
+    "text": "This project analyzes data from past Summer Olympics to explore patterns and trends in athlete performance and demographics, focusing on basketball and country-level performance. The first question investigates the evolution of basketball players’ heights over time, utilizing a density plot to visualize changes and a logistic regression model to assess how height influences the probability of winning a medal. Results reveal significant trends in player height and its relationship with competitive success. The second question examines how countries’ performance has shifted across Olympic Games, with particular attention to the potential influence of major world events. [Details about findings related to countries’ performance will be added once analysis is complete.] Together, these analyses provide insight into the interplay between individual attributes and global factors in shaping Olympic outcomes."
   },
   {
     "objectID": "presentation.html",
@@ -145,5 +145,33 @@
     "title": "Project title",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nAnd add footnotes↩︎"
+  },
+  {
+    "objectID": "index.html#introduction-and-data",
+    "href": "index.html#introduction-and-data",
+    "title": "Visualizing the Olympics",
+    "section": "Introduction and Data",
+    "text": "Introduction and Data"
+  },
+  {
+    "objectID": "index.html#methodology",
+    "href": "index.html#methodology",
+    "title": "Visualizing the Olympics",
+    "section": "Methodology",
+    "text": "Methodology"
+  },
+  {
+    "objectID": "index.html#results",
+    "href": "index.html#results",
+    "title": "Visualizing the Olympics",
+    "section": "Results",
+    "text": "Results"
+  },
+  {
+    "objectID": "index.html#discussion",
+    "href": "index.html#discussion",
+    "title": "Visualizing the Olympics",
+    "section": "Discussion",
+    "text": "Discussion"
   }
 ]

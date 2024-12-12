@@ -1,11 +1,11 @@
 ---
-title: "Proposal title"
+title: "INFO 526 Final Project"
 subtitle: "Proposal"
 author: 
   - name: "Mint Minds For DataViz"
     affiliations:
       - name: "School of Information, University of Arizona"
-description: "Project description"
+description: "The project proposal identifies and explores three potential datasets to be used for the project."
 format:
   html:
     code-tools: true
