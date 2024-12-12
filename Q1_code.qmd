@@ -52,7 +52,7 @@ mens_basketball <- subset(basketball, Event %in% c("Basketball Men's Basketball"
 mens_basketball$Decade = as.factor(mens_basketball$Decade)
 
 # find mode for 1930 and 2010
-basketball_summary_stats_by_group = mens_basketball |>
+basketball_summary_stats_by_decade = mens_basketball |>
   group_by(Decade) |>
   summarize(mode = Mode(Height_Inches, na.rm = TRUE)) |>
   ungroup()
