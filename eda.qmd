@@ -1,52 +1,23 @@
----
-title: "eda"
-editor: visual
----
-
 ```{r}
-library(ggplot2)
+#| warning: false
+#| message: false
+# Load in packages
+if (!require("pacman")) 
+  install.packages("pacman")
+
+pacman::p_load(tidyverse,
+               here)
 ```
 
 ```{r}
-olympics <- read_csv(here("data", "athlete_events.csv"))
+#| warning: false
+#| message: false
 
-# create decade column, years are rounded down for decade column (EX: Year=1896,Decade=1890)
-olympics$Decade <- floor(olympics$Year / 10) * 10
+olympics = read_csv(here("data", "athlete_events.csv"))
 
-# create height in inches column
-olympics$Height_Inches <- round(olympics$Height / 2.54)
+basketball = subset(olympics, Sport == 'Basketball')
 
-# create new df containing only basketball data
-basketball <- subset(olympics, Sport == 'Basketball')
-
-# create height in feet column
-basketball$Height_Ft <- floor(basketball$Height_Inches / 12)
-
-# create remainder of inches column
-basketball$Height_Inches_Rem <- round(basketball$Height_Inches %% 12)
-
-# filter even further for only mens basketball data
-mens_basketball <- subset(basketball, Event %in% c("Basketball Men's Basketball"))
-
-# convert decade column to factor for plotting
-mens_basketball$Decade = as.factor(mens_basketball$Decade)
-
-# find mode for 1930 and 2010
-basketball_summary_stats_by_decade = mens_basketball |>
-  group_by(Decade) |>
-  summarize(mode = Mode(Height_Inches, na.rm = TRUE)) |>
-  ungroup()
-
-ggplot(basketball_summary_stats_by_decade, aes(x = Decade, y = mode)) + 
-  geom_bar(stat = "identity") + 
-  geom_text(aes(label = mode), vjust = -0.5) + 
-  labs(
-    title = "Average Basketball Player Height per Decade"
-  ) +
-  coord_flip() + 
-  coord_cartesian(clip = "off") + 
-  theme_minimal() + 
-  theme(panel.grid = element_blank())
-
-
+basketball |>
+  ggplot(aes(y = Height, group = Year)) +
+  geom_boxplot()
 ```
