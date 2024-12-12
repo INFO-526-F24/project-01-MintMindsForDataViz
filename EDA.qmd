@@ -58,6 +58,7 @@ ggplot(basketball_summary_stats_by_decade, aes(x = Decade, y = mean, fill = mean
   theme_minimal() + 
   theme(panel.grid = element_blank(), legend.position = "none")
 ```
+
 ```{r}
 # Height box plot per decade
 
@@ -104,6 +105,7 @@ ggplot(data = mens_basketball, aes(x = Height_Inches)) +
   )
 
 ```
+
 ```{r}
 # Histogram of heights
 
@@ -124,6 +126,7 @@ ggplot(data = mens_basketball, aes(x = Height_Inches)) +
     panel.grid = element_blank()
   )
 ```
+
 ```{r}
 # Avg heights by game
 
@@ -146,4 +149,26 @@ ggplot(data = avg_heights, aes(x = Year, y = mean_height)) +
     panel.grid = element_blank()
   )
 
+```
+
+```{r, fig.width=10, fig.height=6}
+avg_heights_team <- mens_basketball %>%
+  group_by(Team) %>%
+  summarize(mean_height = mean(Height_Inches, na.rm = TRUE)) 
+
+# Plot a horizontal bar chart
+ggplot(data = avg_heights_team, aes(x = reorder(Team, mean_height), y = mean_height)) +
+  geom_col(fill = "deepskyblue") +
+  labs(
+    title = "Average Player Height by Team",
+    x = "Team",
+    y = "Average Height (in)"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid = element_blank(),
+    plot.title = element_text(hjust = 0.5),
+    axis.text.y = element_text(size = 6)
+  ) +
+  coord_flip()
 ```
