@@ -33,138 +33,25 @@ To create the plots shown below and the ridgeline plot used to help answer our f
 
 Knowing that the average height throughout all of Olympics men’s basketball is 77 inches, we created the following visualizations:
 
-```{r}
-print(paste("Average Olympic men's basketball player height:", round(mean(mens_basketball$Height_Inches, na.rm = TRUE)), "inches"))
-```
-
-```{r}
-#| warning: false
-#| message: false
-# Load in packages
-if (!require("pacman")) 
-  install.packages("pacman")
-
-pacman::p_load(tidyverse,
-               here,
-               DescTools)
-
-# Load and wrangle data
-olympics <- read_csv(here("data", "athlete_events.csv"))
-
-# create decade column, years are rounded down for decade column (EX: Year=1896,Decade=1890)
-olympics$Decade <- floor(olympics$Year / 10) * 10
-
-# create height in inches column
-olympics$Height_Inches <- round(olympics$Height / 2.54)
-
-# create new df containing only basketball data
-basketball <- subset(olympics, Sport == 'Basketball')
-
-# create height in feet column
-basketball$Height_Ft <- floor(basketball$Height_Inches / 12)
-
-# create remainder of inches column
-basketball$Height_Inches_Rem <- round(basketball$Height_Inches %% 12)
-
-basketball <- subset(basketball, !is.na(Height)) # remove NA height rows
-
-# filter even further for only mens basketball data
-mens_basketball <- subset(basketball, Event %in% c("Basketball Men's Basketball"))
-
-# convert decade column to factor for plotting
-mens_basketball$Decade = as.factor(mens_basketball$Decade)
-
-# find average for 1930 and 2010
-basketball_summary_stats_by_decade = mens_basketball |>
-  group_by(Decade) |>
-  summarize(mean = round(Mean(Height_Inches, na.rm = TRUE),1)) |>
-  ungroup()
-ggplot(basketball_summary_stats_by_decade, aes(x = Decade, y = mean, fill = mean)) + 
-  geom_bar(stat = "identity") + 
-  geom_text(aes(label = mean), vjust = -0.5) + 
-  labs(
-    title = "Average Olympic Men's Basketball Player Height by Decade",
-    y = "Height (in)"
-  ) +
-  coord_flip() + 
-  coord_cartesian(clip = "off") + 
-  scale_fill_gradient(low = "deepskyblue", high = "navy") + 
-  theme_minimal() + 
-  theme(panel.grid = element_blank(), legend.position = "none")
-```
+![](images/clipboard-1588716658.png)
 
 One thing to note is that basketball did not start in the Olympics until 1936. Based on the visualization above, it is clear that the height of Olympic men’s basketball players has increased by just over 7 inches in these 80 years.
 
-```{r}
-# Height box plot per decade
-
-ggplot(data = mens_basketball, aes(x = Decade, y = Height_Inches)) +
-  geom_boxplot(fill = "deepskyblue", color = "black") +
-  labs(
-    title = "Olympic Men's Basketball Height Distribution by Deacde",
-    x = "Decade",
-    y = "Height (in)"
-  ) +
-  theme_minimal() +
-  theme(
-    panel.grid = element_blank(),
-    # plot.title = element_text(hjust = 0.5)
-  )
-```
+![](images/clipboard-4091975023.png)
 
 These box plots show a similar story to the bar plots above. While heights increased from 1930 through 1980, by 1990 the growth had slowed.
 
-```{r}
-# Avg heights by game
+![](images/clipboard-3575169009.png)
 
-avg_heights <- mens_basketball %>%
-  group_by(Year) %>%
-  summarize(mean_height = mean(Height_Inches, na.rm = TRUE))
+The line plot above displays the average height of Olympic Men's basketball athletes since 1936. Now we can see in more detail that player heights reached a new peak in 1992 and have stayed fairly consistent since then.
 
-# Plot the line chart
-ggplot(data = avg_heights, aes(x = Year, y = mean_height)) +
-  geom_line(color = "deepskyblue", size = 1) +
-  geom_point(color = "goldenrod3") +
-  labs(
-    title = "Average Olympics Men's Basketball Player Height by Year",
-    x = "Year",
-    y = "Average Height (in)"
-  ) +
-  scale_x_continuous(breaks = seq(1936, 2016, by = 10), limits = c(1936, 2016)) + 
-  theme_minimal() +
-  theme(
-    panel.grid = element_blank()
-  )
-```
-
-The line plot above displays the average height of Olympic men's basketball athletes since 1936. Now we can see in more detail that player heights reached a new peak in 1992 and have stayed fairly consistent since then.
-
-```{r}
-# Histogram of heights
-
-ggplot(data = mens_basketball, aes(x = Height_Inches)) +
-  geom_histogram(
-    binwidth = 1,
-    fill = "deepskyblue",
-    color = "black"
-  ) +
-  labs(
-    title = "Distribution of Olympics Men's Basketball Player Heights",
-    x = "Height (in)",
-    y = "Frequency"
-  ) + 
-  scale_x_continuous(breaks = seq(60, 90, by = 5)) +
-  theme_minimal() +
-  theme(
-    panel.grid = element_blank()
-  )
-```
+![](images/clipboard-447873269.png)
 
 The final exploratory visualization for Olympic men’s basketball player heights confirms that the average height between 1936 and 2016 is around 77 inches, or 6 feet 5 inches. It also shows the small frequency of players below 70 inches (5 feet 10 inches) and above 85 inches (7 feet 1 inch).
 
 ## Methodology
 
-The visualization used for displaying Olympic men’s basketball players' heights over each decade is a ridgeline plot. A ridgeline plot makes it easy to see how the most common Olympic basketball player heights have increased by showing the changes in height distributions for each decade. To build the ridgeline plot we used the created height in inches and decade columns. 
+The visualization used for displaying Olympic men’s basketball players' heights over each decade is a ridge-line plot. A ridge-line plot makes it easy to see how the most common Olympic basketball player heights have increased by showing the changes in height distributions for each decade. To build the ridge-line plot we used the created height in inches and decade columns. 
 
 The methodology used to answer our first research question is a logistic regression model to see the probabilities of winning a medal based on height. The model will not take into account the type of medal won, but simply if a medal was won or not since a logistic regression model is used for binary classification. To create the model, we created a binary column showcasing a 1 if a medal was won and a 0 if not. We then created a data frame consisting of only heights and whether a medal was won or not. All NAs from the height column were dropped and this data frame was then split into training and testing data for the logistic regression model.
 
@@ -178,4 +65,92 @@ A dashboard was created to showcase all of these visualizations in one place. Al
 
 ## Results
 
-## Discussion
+**1. Olympic Men’s Basketball Player Heights**
+
+**Insight:** The most common or average height for Olympic men’s basketball players has considerably increased over the years
+
+**Key Findings:**
+
+-   In the 1930’s, the common height was 6’0’’. By the 2010s, it had increased to 6 '8".
+
+-   This increase highlights the evolution of player selection criteria and the growing emphasis on height as an advantage in basketball.
+
+**Visualization:**
+
+The distribution of heights of men’s basketball players from the 1930s to 2016 is displayed in the ridge plots showing the upward shift in height distribution across decades, with annotations emphasizing the shift.
+
+![**2. Height and Medal-Winning probability**](images/clipboard-2418340534.png)
+
+**Insights:**
+
+-   Height is a significant factor in predicting winning probability in men’s basketball, with a P-value of 6.05e- 10.
+
+-   The odds of winning increase by 8.85% for every one-inch increase in height.
+
+-   Despite the statistical Significance, the AUC of 0.5973 indicates limited predictive power when height is used as the sole or major predictor
+
+**Visualization Highlights:**
+
+-   The logistic regression curve shows the relationship between height and the probability of winning a medal.
+
+-   The jittered data points introduce a little nuance to the visualization, demonstrating the model’s predictions alongside the observed data.
+
+**Supporting insights:**
+
+The moderate AUC score illustrates the need for a multifactorial approach to athlete evaluation beyond physical phenotypes.
+
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeeEGxD_KfXNcScZcs-IJ2g0WGSkgrzwdtwSiOXbnCJKtbHGn42Ihx06ImXNdll-M1JHw1liSvUUWxDqeOslPLucdVQtFhjOEwm14FZc6YVkK10UckuPSL6iaLkNitMOSPf4TXNZw?key=kgZVCeAqo8ReTS9HI5_pVizG)**3. Medal Trends over time (top 10 countries):**
+
+**Insight:** Medal trends of the top 10 countries reflect a longitudinal dynamic of consistency in the performance of these nations, fluctuations in competitive investment, and changes in focus in coverage of various sports.
+
+**Key Findings:**
+
+-   The line plot shows how the total medals won by the 10 countries were distributed along the timeline.
+
+-   Some countries are growing steadily and may remain at the transcendence of investing in athletic performance.
+
+-   Changing levels of competition or participation over decades are suggested by differences in medal counts.
+
+**Visualization:**
+
+**Line Plot:** The plot represents the trajectory of total medals obtained by the top countries, in an unmistakable way to identify the periods in which they grew their performance and when there were some dips. The visualization shows how dominant countries have managed to keep their edge while others have surged and fallen.
+
+![](images/clipboard-24885717.png)
+
+**4. Gold Medal Distribution:**
+
+**Insight:** Gold medal dominance differs markedly from country to country with some nations displaying eras of sustained supremacy in terms of total gold medal wins.
+
+**Key Findings:**
+
+-   The area chart shows the distribution of gold medals among the top-performing nations over time.
+
+-   Countries with a strategic focus on Olympic performance, like the USA and USSR, dominated certain decades.
+
+-   There has been an increased distribution of gold medals in the last few decades, indicating increased competition, with more countries contributing to the overall medal count.
+
+**Visualization:**
+
+**Area Chart:** This style of chart highlights the changes in dominant gold medal-winning countries over the decades, with transitions, signaling shifts in athlete power and ever-increasing competition as the Games moved into a new area.
+
+![](images/clipboard-3279680891.png)
+
+### **Discussions:**
+
+Many articles drew their data from Olympic Games data, yielding deep insights into long-term trends in athletic performance and country-level dominance. The rise in the average height of men’s basketball players (from 1932 to today) is indicative of evolving athletic demands probably influenced by progress in sports science and a competitive drive for physiological optimization. Although height was found to correlate strongly with the probability of being a medal winner, the relatively low predictive power of this model (AUC = 0.5973) demonstrates that success in sports is multifactorial, involving technical skills, teamwork, and psychological resilience.
+
+The patterns of medals won by the top 10 countries over the years showed an unflinching dominance of a few nations, including the United States and the former Soviet Union, but also a growing global competitiveness in the past 15 years. These trends highlight the importance of consistent investment in sports infrastructure and talent development. Long-term trends also mirror the effects of historical and geopolitical developments that have disrupted fair flows of opportunities and resources.
+
+The gold medal distribution over time did show how dominance is concentrated among a select few nations, though trends in recent games suggest a move towards broadening participation and success around the world. This would mean advancement in evening out the playing field such that emerging countries can compete against long-time leading countries.
+
+So while this analysis revealed several important trends and factors driving success, there still seemed to be crucial limitations. The link between height and medal success is nuanced and needs to be explored in light of a variety of other factors including economic conditions, training regimes, and the impact of particular sports disciplines. The focus on medal production by dominant countries, informative as it is, hides the achievements of athletes from less established nations who are making significant strides on the world stage.
+
+Future work in this area might include exploratory analysis of non-medal performances, further analysis of the intersection between politics, economy, and sports, or dynamic tools to visualize trends in more effective ways. Such initiatives could deliver a more comprehensive perspective on the changing landscape of international sports and be transformative for countries seeking to improve their Olympic performance.
+
+### **References**
+
+Griffin, R. (2018, June 15). 120 years of olympic history: Athletes and results. Kaggle. https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results 
+
+Roos, D. (2020, March 24). When world events disrupted the Olympics. History.com. https://www.history.com/news/olympics-postponed-cancelled 
+
+Kennedy, L. (2021, July 26). 6 times the Olympics were boycotted. History.com. https://www.history.com/news/olympic-boycotts 
