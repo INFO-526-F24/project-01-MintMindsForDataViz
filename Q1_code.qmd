@@ -53,7 +53,6 @@ basketball_summary_stats_by_decade = mens_basketball |>
   summarize(mode = Mode(Height_Inches, na.rm = TRUE)) |>
   ungroup()
 
-# violin plot
 mens_basketball|>
   ggplot(aes(x = Height_Inches, y = Decade, fill = Decade)) +
   geom_density_ridges() +
