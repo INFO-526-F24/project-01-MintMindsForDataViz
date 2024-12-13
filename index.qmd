@@ -23,7 +23,158 @@ This project analyzes data from past Summer Olympics to explore patterns and tre
 
 ## Introduction and Data
 
+For our project, we have chosen to analyze Olympic data. Our motivation is to learn more about the evolution of athletes over time and which countries have dominated the games. The dataset used comes from Kaggle and describes characteristics of Olympic athletes such as name, gender, country, age, height, weight, event, and medal if applicable for every Olympic athlete from Athens 1896 to Rio 2016.
+
+To learn more about the evolution of athletes our first research question states: Is there any ideal height for Olympics men’s basketball and has it changed over time? To analyze the performance of different nations our second question states: How has the performance of different countries evolved and what major events influenced changes?
+
+To start answering our first question we conducted exploratory data analysis and created visualizations to explore the heights of Olympic men’s basketball players over time. 
+
+To create the plots shown below and the ridgeline plot used to help answer our first research question we created a column displaying the height in inches by dividing the height in centimeters column by 2.54. A decade column was also created which grouped all Olympic games into their corresponding decade. A few basketball players’ heights were missing, so all athletes missing height entries were removed.
+
+Knowing that the average height throughout all of Olympics men’s basketball is 77 inches, we created the following visualizations:
+
+```{r}
+print(paste("Average Olympic men's basketball player height:", round(mean(mens_basketball$Height_Inches, na.rm = TRUE)), "inches"))
+```
+
+```{r}
+#| warning: false
+#| message: false
+# Load in packages
+if (!require("pacman")) 
+  install.packages("pacman")
+
+pacman::p_load(tidyverse,
+               here,
+               DescTools)
+
+# Load and wrangle data
+olympics <- read_csv(here("data", "athlete_events.csv"))
+
+# create decade column, years are rounded down for decade column (EX: Year=1896,Decade=1890)
+olympics$Decade <- floor(olympics$Year / 10) * 10
+
+# create height in inches column
+olympics$Height_Inches <- round(olympics$Height / 2.54)
+
+# create new df containing only basketball data
+basketball <- subset(olympics, Sport == 'Basketball')
+
+# create height in feet column
+basketball$Height_Ft <- floor(basketball$Height_Inches / 12)
+
+# create remainder of inches column
+basketball$Height_Inches_Rem <- round(basketball$Height_Inches %% 12)
+
+basketball <- subset(basketball, !is.na(Height)) # remove NA height rows
+
+# filter even further for only mens basketball data
+mens_basketball <- subset(basketball, Event %in% c("Basketball Men's Basketball"))
+
+# convert decade column to factor for plotting
+mens_basketball$Decade = as.factor(mens_basketball$Decade)
+
+# find average for 1930 and 2010
+basketball_summary_stats_by_decade = mens_basketball |>
+  group_by(Decade) |>
+  summarize(mean = round(Mean(Height_Inches, na.rm = TRUE),1)) |>
+  ungroup()
+ggplot(basketball_summary_stats_by_decade, aes(x = Decade, y = mean, fill = mean)) + 
+  geom_bar(stat = "identity") + 
+  geom_text(aes(label = mean), vjust = -0.5) + 
+  labs(
+    title = "Average Olympic Men's Basketball Player Height by Decade",
+    y = "Height (in)"
+  ) +
+  coord_flip() + 
+  coord_cartesian(clip = "off") + 
+  scale_fill_gradient(low = "deepskyblue", high = "navy") + 
+  theme_minimal() + 
+  theme(panel.grid = element_blank(), legend.position = "none")
+```
+
+One thing to note is that basketball did not start in the Olympics until 1936. Based on the visualization above, it is clear that the height of Olympic men’s basketball players has increased by just over 7 inches in these 80 years.
+
+```{r}
+# Height box plot per decade
+
+ggplot(data = mens_basketball, aes(x = Decade, y = Height_Inches)) +
+  geom_boxplot(fill = "deepskyblue", color = "black") +
+  labs(
+    title = "Olympic Men's Basketball Height Distribution by Deacde",
+    x = "Decade",
+    y = "Height (in)"
+  ) +
+  theme_minimal() +
+  theme(
+    panel.grid = element_blank(),
+    # plot.title = element_text(hjust = 0.5)
+  )
+```
+
+These box plots show a similar story to the bar plots above. While heights increased from 1930 through 1980, by 1990 the growth had slowed.
+
+```{r}
+# Avg heights by game
+
+avg_heights <- mens_basketball %>%
+  group_by(Year) %>%
+  summarize(mean_height = mean(Height_Inches, na.rm = TRUE))
+
+# Plot the line chart
+ggplot(data = avg_heights, aes(x = Year, y = mean_height)) +
+  geom_line(color = "deepskyblue", size = 1) +
+  geom_point(color = "goldenrod3") +
+  labs(
+    title = "Average Olympics Men's Basketball Player Height by Year",
+    x = "Year",
+    y = "Average Height (in)"
+  ) +
+  scale_x_continuous(breaks = seq(1936, 2016, by = 10), limits = c(1936, 2016)) + 
+  theme_minimal() +
+  theme(
+    panel.grid = element_blank()
+  )
+```
+
+The line plot above displays the average height of Olympic men's basketball athletes since 1936. Now we can see in more detail that player heights reached a new peak in 1992 and have stayed fairly consistent since then.
+
+```{r}
+# Histogram of heights
+
+ggplot(data = mens_basketball, aes(x = Height_Inches)) +
+  geom_histogram(
+    binwidth = 1,
+    fill = "deepskyblue",
+    color = "black"
+  ) +
+  labs(
+    title = "Distribution of Olympics Men's Basketball Player Heights",
+    x = "Height (in)",
+    y = "Frequency"
+  ) + 
+  scale_x_continuous(breaks = seq(60, 90, by = 5)) +
+  theme_minimal() +
+  theme(
+    panel.grid = element_blank()
+  )
+```
+
+The final exploratory visualization for Olympic men’s basketball player heights confirms that the average height between 1936 and 2016 is around 77 inches, or 6 feet 5 inches. It also shows the small frequency of players below 70 inches (5 feet 10 inches) and above 85 inches (7 feet 1 inch).
+
 ## Methodology
+
+The visualization used for displaying Olympic men’s basketball players' heights over each decade is a ridgeline plot. A ridgeline plot makes it easy to see how the most common Olympic basketball player heights have increased by showing the changes in height distributions for each decade. To build the ridgeline plot we used the created height in inches and decade columns. 
+
+The methodology used to answer our first research question is a logistic regression model to see the probabilities of winning a medal based on height. The model will not take into account the type of medal won, but simply if a medal was won or not since a logistic regression model is used for binary classification. To create the model, we created a binary column showcasing a 1 if a medal was won and a 0 if not. We then created a data frame consisting of only heights and whether a medal was won or not. All NAs from the height column were dropped and this data frame was then split into training and testing data for the logistic regression model.
+
+To answer our second research question which focuses on the distribution of medals by country, a few transformations were done. First, a data frame (medal data) showing the count of each type of medal for each country from each Olympics is shown. For example, starting in 1896 we can see the distribution of bronze, silver, gold, and total medals for each country up until 2016. Next, we had to identify the top 10 countries leading in total medals and filter so that only those countries appeared in our medal data. Finally, we created a data frame consisting of events that affected Olympic participation and the years that they occurred, so these years could be plotted. 
+
+To showcase medal trends over time, we created a line plot displaying the total medals for the top 10 countries. The plot also showcases the year's major world events occurred, which can explain some fluctuations in medal counts. We chose a line plot because it effectively displays countries' changes in medal counts over time and allows for a simple display of the world event years.
+
+We also created an area chart illustrating the distribution of gold medals won by top countries. An area chart was chosen because it highlights the changes in gold medal dominance across countries and the overall growth of the Olympic games in terms of total gold medals.
+
+A dashboard was created to showcase all of these visualizations in one place. Although not showcased on the dashboard, in our presentation we have included an animation of medal trends over time for the top 10 countries in total medal count.
 
 ## Results
 
