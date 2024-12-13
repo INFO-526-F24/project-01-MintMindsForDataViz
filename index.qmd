@@ -99,7 +99,9 @@ The distribution of heights of men’s basketball players from the 1930s to 2016
 
 The moderate AUC score illustrates the need for a multifactorial approach to athlete evaluation beyond physical phenotypes.
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeeEGxD_KfXNcScZcs-IJ2g0WGSkgrzwdtwSiOXbnCJKtbHGn42Ihx06ImXNdll-M1JHw1liSvUUWxDqeOslPLucdVQtFhjOEwm14FZc6YVkK10UckuPSL6iaLkNitMOSPf4TXNZw?key=kgZVCeAqo8ReTS9HI5_pVizG)**3. Medal Trends over time (top 10 countries):**
+![](images/clipboard-754409131.png)
+
+**3. Medal Trends over time (top 10 countries):**
 
 **Insight:** Medal trends of the top 10 countries reflect a longitudinal dynamic of consistency in the performance of these nations, fluctuations in competitive investment, and changes in focus in coverage of various sports.
 
