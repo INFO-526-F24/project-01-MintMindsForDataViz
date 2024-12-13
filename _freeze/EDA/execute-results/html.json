@@ -1,8 +1,8 @@
 {
-  "hash": "2316c5ef68eebf9d050e32b0f45e69f7",
+  "hash": "a15a291560b9d27270b4edbe6a02d958",
   "result": {
     "engine": "knitr",
-    "markdown": "::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](EDA_files/figure-html/unnamed-chunk-2-1.png){width=768}\n:::\n:::\n",
+    "markdown": "::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](EDA_files/figure-html/unnamed-chunk-3-1.png){width=768}\n:::\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](EDA_files/figure-html/unnamed-chunk-4-1.png){width=768}\n:::\n:::\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"Average men's height: 77 inches\"\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"Average men's height: 195 centimeters\"\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"Average men's weight: 92 kg\"\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"Average men's weight: 202 pounds\"\n```\n\n\n:::\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](EDA_files/figure-html/unnamed-chunk-6-1.png){width=768}\n:::\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](EDA_files/figure-html/unnamed-chunk-7-1.png){width=768}\n:::\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](EDA_files/figure-html/unnamed-chunk-8-1.png){width=768}\n:::\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](EDA_files/figure-html/unnamed-chunk-9-1.png){width=960}\n:::\n:::\n",
     "supporting": [
       "EDA_files"
     ],
