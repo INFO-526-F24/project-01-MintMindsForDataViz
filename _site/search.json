@@ -52,22 +52,22 @@
     "objectID": "presentation.html#quarto",
     "href": "presentation.html#quarto",
     "title": "Visualizing the Olympics",
-    "section": "",
-    "text": "The presentation is created using the Quarto CLI\n## sets the start of a new slide"
+    "section": "Quarto",
+    "text": "Quarto\n\nThe presentation is created using the Quarto CLI\n## sets the start of a new slide"
   },
   {
     "objectID": "presentation.html#layouts",
     "href": "presentation.html#layouts",
     "title": "Visualizing the Olympics",
-    "section": "",
-    "text": "You can use plain text\n\n\n\nor bullet points1\n\n\nor in two columns\n\n\n\nlike\nthis"
+    "section": "Layouts",
+    "text": "Layouts\nYou can use plain text\n\n\n\nor bullet points1\n\n\nor in two columns\n\n\nlike\nthis\n\nAnd add footnotes"
   },
   {
     "objectID": "presentation.html#code",
     "href": "presentation.html#code",
     "title": "Visualizing the Olympics",
-    "section": "",
-    "text": "# A tibble: 2 × 5\n  term        estimate std.error statistic       p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n1 (Intercept)   25.3      3.08        8.22 0.00000000358\n2 speed         -0.116    0.0642     -1.81 0.0806       \n\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1    0.0983        0.0682  5.82      3.27  0.0806     1  -101.  207.  212.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;"
+    "section": "Code",
+    "text": "Code\n\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic       p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n1 (Intercept)   25.3      3.08        8.22 0.00000000358\n2 speed         -0.116    0.0642     -1.81 0.0806       \n\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1    0.0983        0.0682  5.82      3.27  0.0806     1  -101.  207.  212.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;"
   },
   {
     "objectID": "presentation.html#plots",
@@ -80,8 +80,8 @@
     "objectID": "presentation.html#plot-and-text",
     "href": "presentation.html#plot-and-text",
     "title": "Visualizing the Olympics",
-    "section": "",
-    "text": "Some text\ngoes here"
+    "section": "Plot and text",
+    "text": "Plot and text\n\n\n\nSome text\ngoes here"
   },
   {
     "objectID": "presentation.html#tables",
@@ -95,7 +95,7 @@
     "href": "presentation.html#images",
     "title": "Visualizing the Olympics",
     "section": "Images",
-    "text": "Images\n\n\n\nImage credit: Danielle Navarro, Percolate."
+    "text": "Images\n\nImage credit: Danielle Navarro, Percolate."
   },
   {
     "objectID": "presentation.html#math-expressions",
@@ -123,14 +123,14 @@
     "href": "index.html",
     "title": "Visualizing the Olympics",
     "section": "",
-    "text": "This project analyzes data from past Summer Olympics to explore patterns and trends in athlete performance and demographics, focusing on basketball and country-level performance. The first question investigates the evolution of basketball players’ heights over time, utilizing a density plot to visualize changes and a logistic regression model to assess how height influences the probability of winning a medal. Results reveal significant trends in player height and its relationship with competitive success. The second question examines how countries’ performance has shifted across Olympic Games, with particular attention to the potential influence of major world events. [Details about findings related to countries’ performance will be added once analysis is complete.] Together, these analyses provide insight into the interplay between individual attributes and global factors in shaping Olympic outcomes."
+    "text": "This project analyzes data from past Olympics to explore patterns and trends in athlete performance and demographics, focusing on basketball and country-level performance. The first question investigates the evolution of basketball players’ heights over time, utilizing a ridge plot to visualize changes and a logistic regression model to assess how height influences the probability of winning a medal. Results reveal significant trends in player height and its relationship with competitive success. The second question examines how countries’ performance has shifted across Olympic Games, with particular attention to the potential influence of major world events. Together, these analyses provide insight into the interplay between individual attributes and global factors in shaping Olympic outcomes."
   },
   {
     "objectID": "index.html#abstract",
     "href": "index.html#abstract",
     "title": "Visualizing the Olympics",
     "section": "",
-    "text": "This project analyzes data from past Summer Olympics to explore patterns and trends in athlete performance and demographics, focusing on basketball and country-level performance. The first question investigates the evolution of basketball players’ heights over time, utilizing a density plot to visualize changes and a logistic regression model to assess how height influences the probability of winning a medal. Results reveal significant trends in player height and its relationship with competitive success. The second question examines how countries’ performance has shifted across Olympic Games, with particular attention to the potential influence of major world events. [Details about findings related to countries’ performance will be added once analysis is complete.] Together, these analyses provide insight into the interplay between individual attributes and global factors in shaping Olympic outcomes."
+    "text": "This project analyzes data from past Olympics to explore patterns and trends in athlete performance and demographics, focusing on basketball and country-level performance. The first question investigates the evolution of basketball players’ heights over time, utilizing a ridge plot to visualize changes and a logistic regression model to assess how height influences the probability of winning a medal. Results reveal significant trends in player height and its relationship with competitive success. The second question examines how countries’ performance has shifted across Olympic Games, with particular attention to the potential influence of major world events. Together, these analyses provide insight into the interplay between individual attributes and global factors in shaping Olympic outcomes."
   },
   {
     "objectID": "presentation.html",
@@ -180,5 +180,26 @@
     "title": "Visualizing the Olympics",
     "section": "Column",
     "text": "Column\n\nRow\n\n\n\n\n\n\n\n\n\n\n\nRow"
+  },
+  {
+    "objectID": "Q1_code.html",
+    "href": "Q1_code.html",
+    "title": "Visualization 1",
+    "section": "",
+    "text": "# Visualization 1\n\n# Load in packages\nif (!require(\"pacman\")) \n  install.packages(\"pacman\")\n\npacman::p_load(tidyverse,\n               ggridges,\n               here,\n               RColorBrewer,\n               DescTools,\n               grid,\n               caTools,\n               pROC)\n\n\n#### Load in Data\nolympics &lt;- read_csv(here(\"data\", \"athlete_events.csv\"))\n\n#### Data Prep\n\n# create decade column, years are rounded down for decade column (EX: Year=1896,Decade=1890)\nolympics$Decade &lt;- floor(olympics$Year / 10) * 10\n\n# create height in inches column\nolympics$Height_Inches &lt;- round(olympics$Height / 2.54)\n\n# create new df containing only basketball data\nbasketball &lt;- subset(olympics, Sport == 'Basketball')\n\n# create height in feet column\nbasketball$Height_Ft &lt;- floor(basketball$Height_Inches / 12)\n\n# create remainder of inches column\nbasketball$Height_Inches_Rem &lt;- round(basketball$Height_Inches %% 12)\n\n# filter even further for only mens basketball data\nmens_basketball &lt;- subset(basketball, Event %in% c(\"Basketball Men's Basketball\"))\n\n# convert decade column to factor for plotting\nmens_basketball$Decade = as.factor(mens_basketball$Decade)\n\n# find mode for 1930 and 2010\nbasketball_summary_stats_by_decade = mens_basketball |&gt;\n  group_by(Decade) |&gt;\n  summarize(mode = Mode(Height_Inches, na.rm = TRUE)) |&gt;\n  ungroup()\n\nmens_basketball|&gt;\n  ggplot(aes(x = Height_Inches, y = Decade, fill = Decade)) +\n  geom_density_ridges() +\n  scale_fill_brewer(palette = \"Oranges\") +\n  scale_x_continuous(breaks = seq(60, 90, by = 5)) +\n  labs(x = \"Height (inches)\",\n       y = NULL,\n       title = \"The Increase of Olympic Men's Basketball Player Heights\",\n       subtitle = \"from the 1930's to the 2010's\") +\n  geom_segment(aes(x = 80.65, y = 10.45, xend = 88, yend = 4.5), linewidth = 0.3) +\n  geom_segment(aes(x = 72.2, y = 2.7, xend = 88, yend = 4.5), linewidth = 0.3) +\n  geom_text(aes(x = 81.3, y = 10.8, label = \"6'8\\\"\"), size = 3) +\n  geom_text(aes(x = 72.7, y = 3.05, label = \"6'0\\\"\"), size = 3) +\n  annotate(\"point\", x = 80.65, y = 10.45, fill = \"red\", size = 3, shape = 21, stroke = 0.5) +\n  annotate(\"point\", x = 72.2, y = 2.7, fill = \"red\", size = 3, shape = 21, stroke = 0.5) +\n  geom_label(aes(x = 88, y = 4.5, label = \"The most common\\nplayer height has\\nincreased by 8 inches\\nsince the 1930's\"),\n             color = \"black\", fill = \"white\", size = 3, fontface = \"bold\") +\n  theme(legend.position = \"none\",\n        panel.background = element_rect(fill = \"white\"),\n        plot.title = element_text(face = \"bold\"),\n        axis.ticks.x = element_blank(),\n        axis.ticks.y = element_blank()) +\n  coord_cartesian(clip = \"off\")\n\n\n\n\n\n\n\n\n\n\nhttps://r-coder.com/subset-r/\nhttps://stackoverflow.com/questions/35352914/floor-a-year-to-the-decade-in-r"
+  },
+  {
+    "objectID": "Q1_code.html#viz-1-references",
+    "href": "Q1_code.html#viz-1-references",
+    "title": "Visualization 1",
+    "section": "",
+    "text": "https://r-coder.com/subset-r/\nhttps://stackoverflow.com/questions/35352914/floor-a-year-to-the-decade-in-r"
+  },
+  {
+    "objectID": "Q1_code.html#viz-2-references",
+    "href": "Q1_code.html#viz-2-references",
+    "title": "Visualization 1",
+    "section": "Viz 2 References",
+    "text": "Viz 2 References\nhttps://www.rpubs.com/fangya/logr\nhttps://quarto.org/docs/dashboards/ (dashboard ref)\nhttps://plotly.com/r/"
   }
 ]
