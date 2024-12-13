@@ -49,7 +49,7 @@ ggplot(basketball_summary_stats_by_decade, aes(x = Decade, y = mean, fill = mean
   geom_bar(stat = "identity") + 
   geom_text(aes(label = mean), vjust = -0.5) + 
   labs(
-    title = "Average Olympic Mens Basketball Player Height by Decade",
+    title = "Average Olympic Men's Basketball Player Height by Decade",
     y = "Height (in)"
   ) +
   coord_flip() + 
@@ -65,20 +65,22 @@ ggplot(basketball_summary_stats_by_decade, aes(x = Decade, y = mean, fill = mean
 ggplot(data = mens_basketball, aes(x = Decade, y = Height_Inches)) +
   geom_boxplot(fill = "deepskyblue", color = "black") +
   labs(
-    title = "Height Distribution by Deacde",
+    title = "Olympic Men's Basketball Height Distribution by Deacde",
     x = "Decade",
     y = "Height (in)"
   ) +
   theme_minimal() +
   theme(
     panel.grid = element_blank(),
-    plot.title = element_text(hjust = 0.5)
+    # plot.title = element_text(hjust = 0.5)
   )
 ```
 
 ```{r}
 print(paste("Average men's height:", round(mean(mens_basketball$Height_Inches, na.rm = TRUE)), "inches"))
 print(paste("Average men's height:", round(mean(mens_basketball$Height, na.rm = TRUE)), "centimeters"))
+print(paste("Average men's weight:", round(mean(mens_basketball$Weight, na.rm = TRUE)), "kg"))
+print(paste("Average men's weight:", round(mean(mens_basketball$Weight * 2.204623, na.rm = TRUE)), "pounds"))
 ```
 
 ```{r}
@@ -103,7 +105,6 @@ ggplot(data = mens_basketball, aes(x = Height_Inches)) +
     axis.text.x = element_text(size = 10),
     axis.text.y = element_blank()
   )
-
 ```
 
 ```{r}
@@ -137,9 +138,9 @@ avg_heights <- mens_basketball %>%
 # Plot the line chart
 ggplot(data = avg_heights, aes(x = Year, y = mean_height)) +
   geom_line(color = "deepskyblue", size = 1) +
-  geom_point(color = "darkgreen") +
+  geom_point(color = "goldenrod3") +
   labs(
-    title = "Average Player Height by Year",
+    title = "Average Olympics Men's Basketball Player Height by Year",
     x = "Year",
     y = "Average Height (in)"
   ) +
@@ -148,7 +149,6 @@ ggplot(data = avg_heights, aes(x = Year, y = mean_height)) +
   theme(
     panel.grid = element_blank()
   )
-
 ```
 
 ```{r, fig.width=10, fig.height=6}
