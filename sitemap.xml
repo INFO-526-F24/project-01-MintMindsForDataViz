@@ -2,22 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://INFO-526-F24.github.io/project-01-MintMindsForDataViz/proposal.html</loc>
-    <lastmod>2024-10-17T06:33:21.246Z</lastmod>
-  </url>
-  <url>
-    <loc>https://INFO-526-F24.github.io/project-01-MintMindsForDataViz/index.html</loc>
-    <lastmod>2024-10-17T02:14:16.881Z</lastmod>
-  </url>
-  <url>
-    <loc>https://INFO-526-F24.github.io/project-01-MintMindsForDataViz/about.html</loc>
-    <lastmod>2024-10-17T02:14:16.237Z</lastmod>
+    <lastmod>2024-11-19T23:33:05.742Z</lastmod>
   </url>
   <url>
     <loc>https://INFO-526-F24.github.io/project-01-MintMindsForDataViz/contract.html</loc>
-    <lastmod>2024-10-17T02:14:16.237Z</lastmod>
+    <lastmod>2024-11-04T16:32:26.841Z</lastmod>
+  </url>
+  <url>
+    <loc>https://INFO-526-F24.github.io/project-01-MintMindsForDataViz/index.html</loc>
+    <lastmod>2024-12-13T16:02:22.990Z</lastmod>
+  </url>
+  <url>
+    <loc>https://INFO-526-F24.github.io/project-01-MintMindsForDataViz/EDA.html</loc>
+    <lastmod>2024-12-13T16:02:22.955Z</lastmod>
   </url>
   <url>
     <loc>https://INFO-526-F24.github.io/project-01-MintMindsForDataViz/presentation.html</loc>
-    <lastmod>2024-10-17T02:14:16.881Z</lastmod>
+    <lastmod>2024-12-05T03:27:22.045Z</lastmod>
+  </url>
+  <url>
+    <loc>https://INFO-526-F24.github.io/project-01-MintMindsForDataViz/dashboard.html</loc>
+    <lastmod>2024-12-06T21:46:40.803Z</lastmod>
+  </url>
+  <url>
+    <loc>https://INFO-526-F24.github.io/project-01-MintMindsForDataViz/Q1_code.html</loc>
+    <lastmod>2024-12-13T16:02:22.955Z</lastmod>
+  </url>
+  <url>
+    <loc>https://INFO-526-F24.github.io/project-01-MintMindsForDataViz/about.html</loc>
+    <lastmod>2024-10-15T16:17:20.553Z</lastmod>
+  </url>
+  <url>
+    <loc>https://INFO-526-F24.github.io/project-01-MintMindsForDataViz/Q2_code.html</loc>
+    <lastmod>2024-12-13T16:02:22.956Z</lastmod>
   </url>
 </urlset>
